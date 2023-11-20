@@ -1,0 +1,47 @@
+# Module system using nwidart laravel modules package
+
+
+- Installation: composer require nwidart/laravel-modules
+- Creating a new module: php artisan module:make ModuleName
+	Example: php artisan module:make Todo
+
+- Add modules path to composer.json file: 
+
+"autoload": {
+    "psr-4": {
+        "App\\": "app/",
+        "Modules\\": "Modules/",
+        "Database\\Factories\\": "database/factories/",
+        "Database\\Seeders\\": "database/seeders/"
+    }
+}
+
+- composer dump-autoload
+
+
+- Make model
+- Base entity setup 
+
+	class BaseModel extends Model
+	{
+	    use HasFactory;
+	    protected $connection = 'todo';
+	    protected $guarded = [];
+	}
+- extend base model 
+
+	class Todo extends BaseModel
+	{
+	    protected $database = 'todos';
+	    protected $fillable = ['title'];
+	    protected static function newFactory()
+	    {
+	        return \Modules\Todo\Database\factories\TodoFactory::new();
+	    }
+	}
+
+- Multi database
+
+- Multi connection
+
+- Module use, publish (assets management)

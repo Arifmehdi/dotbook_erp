@@ -1,0 +1,13 @@
+{
+    "name": "LCManagement",
+    "alias": "lcmanagement",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\LCManagement\\Providers\\LCManagementServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

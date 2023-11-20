@@ -1,0 +1,1 @@
+For chrome: Disable chrome://flags/#block-insecure-private-network-requests settings

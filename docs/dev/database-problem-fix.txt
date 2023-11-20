@@ -1,0 +1,22 @@
+fresh database
+
+import from cloud database
+
+general_settings
+addons
+
+short_menus(2/3)
+
+users
+roles
+permissions
+role_has_permissions
+model_has_permissions
+
+units
+brands
+categories
+products
+currencies
+taxes
+

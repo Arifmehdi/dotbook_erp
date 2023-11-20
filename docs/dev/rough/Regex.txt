@@ -1,0 +1,36 @@
+src="([a-zA-Z-\/\.]+)"
+src="{{ asset('$1') }}"
+
+<input\s+([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*)class="\s*([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*)\s*"\s+([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*)>
+<input\s+([a-zA-Z\0-9_\-\?:{}\[\]"'#\$=->\(\)_\s*]*)\s*class="\s*([a-zA-Z\0-9_\-\?:{}\[\]"'#\$=->\(\)_\s*]*)\s*"\s+([a-zA-Z\0-9_\-\?:{}\[\]"'#\$=->\(\)_\s*]*)>
+
+Searched with:
+<input\s+([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*)class="\s*([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*)\s*"\s+([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*)>
+super_select_all
+
+Rought
+<input\s+([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]+)\s*(class="\s*[a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*\s*")\s*([a-zA-Z\0-9_\-?:{}\[\]"'#=\->\(\)_]*)>
+
+<input type="checkbox" name="([a-zA-Z_]+)"
+<input type="checkbox" {{ $role->hasPermissionTo('$1') ? 'checked' : '' }} name="$1"
+
+
+CSS IE7,IE7 css * prefix in front of property names
+
+\s+\*([a-zA-Z_\-]+:)
+$1
+
+Add role to edit role Regex
+
+1. type="checkbox" name="([a-zA-Z_-]+)" and replace with type="checkbox" name="$1" {{ $role->hasPermissionTo('$1') ? 'checked' : '' }}
+2. Update Title "Add Role" to "Edit Role"
+3. Form action update
+4. Form ID update
+
+Migration DB table already exists issue.
+
+Schema::connection\('([a-zA-Z0-9\-_]+)'\)->create\('([a-zA-Z0-9\-_]+)',
+if(Schema::connection('crm')->hasTable('contacts')) { 
+        return ;
+}
+Schema::connection('$1')->create('$2',

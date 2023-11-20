@@ -1,0 +1,219 @@
+<?php
+
+use App\Models\Account;
+use App\Models\AccountGroup;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+
+Route::get('test', function () {
+
+    // $from_date = '13-06-2023';
+    // $to_date = '13-06-2023';
+
+    // $accountStartDateYmd = '';
+    // $fromDateYmd = '';
+    // $toDateYmd = '';
+    // if ($from_date && $to_date) {
+
+    //     $gs = DB::table('general_settings')->select('business')->first();
+    //     $accountStartDate = date('Y-m-d', strtotime(json_decode($gs->business, true)['start_date']));
+
+    //     $fromDateYmd = Carbon::parse($from_date)->startOfDay();
+    //     $toDateYmd = Carbon::parse($to_date)->endOfDay();
+    //     $accountStartDateYmd = Carbon::parse($accountStartDate)->startOfDay();
+    // }
+
+    // $mainGroups = AccountGroup::query()->with(
+    //     [
+    //         'accounts:id,name,phone,account_number,account_group_id',
+    //         'accounts.accountLedgers:id,account_id,date,voucher_type,debit,credit',
+    //         'subgroupsAccountsForOthers:id,name,parent_group_id',
+    //         'subgroupsAccountsForOthers.accounts.accountLedgers:id,date,account_id,voucher_type,debit,credit',
+    //     ]
+    // )->select('id', 'name', 'parent_group_id')->where('is_bank_or_cash_ac', 1)->where('is_reserved', 1)->get();
+
+    // //
+    // function subGroups($subGroups, $mainGroup, $mainSubGroup, $fromDateYmd, $toDateYmd, $accountStartDateYmd)
+    // {
+    //     foreach ($subGroups as $subGroup) {
+
+    //         if (count($subGroup->accounts) > 0) {
+
+    //             foreach ($subGroup->accounts as $account) {
+
+    //                 $currentDebitOpeningBalance = 0;
+    //                 $currentCreditOpeningBalance = 0;
+    //                 $currentDebit = 0;
+    //                 $currentCredit = 0;
+
+    //                 if ($fromDateYmd && $toDateYmd && $fromDateYmd > $accountStartDateYmd) {
+
+    //                     $currentDebitOpeningBalance = $account->accountLedgers->where('date', '<', $fromDateYmd)->sum('debit');
+
+    //                     $currentCreditOpeningBalance = $account->accountLedgers->where('date', '<', $fromDateYmd)->sum('credit');
+
+    //                     $date_range = [$fromDateYmd, $toDateYmd];
+    //                     $currentDebit = $account->accountLedgers->whereBetween('date', $date_range)->sum('debit');
+    //                     $currentCredit = $account->accountLedgers->whereBetween('date', $date_range)->sum('credit');
+    //                 } elseif ($fromDateYmd && $toDateYmd && $fromDateYmd <= $accountStartDateYmd) {
+
+    //                     $date_range = [$fromDateYmd, $toDateYmd];
+
+    //                     $currentDebitOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->whereBetween('date', $date_range)->sum('debit');
+    //                     $currentCreditOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->whereBetween('date', $date_range)->sum('credit');
+
+    //                     $currentDebit = $account->accountLedgers->where('voucher_type', '!=', 0)->whereBetween('date', $date_range)->sum('debit');
+    //                     $currentCredit = $account->accountLedgers->where('voucher_type', '!=', 0)->whereBetween('date', $date_range)->sum('credit');
+    //                 } else {
+
+    //                     $currentDebitOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->sum('debit');
+    //                     $currentCreditOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->sum('credit');
+
+    //                     $currentDebit = $account->accountLedgers->where('voucher_type', '!=', 0)->sum('debit');
+    //                     $currentCredit = $account->accountLedgers->where('voucher_type', '!=', 0)->sum('credit');
+    //                 }
+
+    //                 $mainSubGroup->total_debit_opening_balance += $currentDebitOpeningBalance;
+    //                 $mainSubGroup->total_credit_opening_balance += $currentCreditOpeningBalance;
+    //                 $mainSubGroup->total_debit += $currentDebit;
+    //
+
+    //   $mainSubGroup->total_credit += $currentCredit;
+
+    //                 $mainGroup->total_debit_opening_balance += $currentDebitOpeningBalance;
+    //                 $mainGroup->total_credit_opening_balance += $currentCreditOpeningBalance;
+    //                 $mainGroup->total_debit += $currentDebit;
+    //                 $mainGroup->total_credit += $currentCredit;
+
+    //                 unset($account->accountLedgers);
+    //             }
+    //         }
+
+    //         if (count($subGroup->subgroupsAccountsForOthers) > 0) {
+
+    //             subGroups($subGroup->subgroupsAccountsForOthers, $mainGroup, $mainSubGroup, $fromDateYmd, $toDateYmd, $accountStartDateYmd);
+    //         }
+    //     }
+    // }
+
+    // foreach ($mainGroups as $mainGroup) {
+
+    //     foreach ($mainGroup->accounts as $account) {
+
+    //         $currentDebitOpeningBalance = 0;
+    //         $currentCreditOpeningBalance = 0;
+    //         $currentDebit = 0;
+    //         $currentCredit = 0;
+
+    //         if ($fromDateYmd && $toDateYmd && $fromDateYmd > $accountStartDateYmd) {
+
+    //             $currentDebitOpeningBalance = $account->accountLedgers->where('date', '<', $fromDateYmd)->sum('debit');
+    //             $currentCreditOpeningBalance = $account->accountLedgers->where('date', '<', $fromDateYmd)->sum('credit');
+
+    //             $date_range = [$fromDateYmd, $toDateYmd];
+    //             $currentDebit = $account->accountLedgers->whereBetween('date', $date_range)->sum('debit');
+    //             $currentCredit = $account->accountLedgers->whereBetween('date', $date_range)->sum('credit');
+    //         } elseif ($fromDateYmd && $toDateYmd && $fromDateYmd <= $accountStartDateYmd) {
+
+    //             $date_range = [$fromDateYmd, $toDateYmd];
+
+    //             $currentDebitOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->whereBetween('date', $date_range)->sum('debit');
+    //             $currentCreditOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->whereBetween('date', $date_range)->sum('credit');
+
+    //             $currentDebit = $account->accountLedgers->where('voucher_type', '!=', 0)->whereBetween('date', $date_range)->sum('debit');
+    //             $currentCredit = $account->accountLedgers->where('voucher_type', '!=', 0)->whereBetween('date', $date_range)->sum('credit');
+    //         } else {
+
+    //             $currentDebitOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->sum('debit');
+    //             $currentCreditOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->sum('credit');
+
+    //             $currentDebit = $account->accountLedgers->where('voucher_type', '!=', 0)->sum('debit');
+    //             $currentCredit = $account->accountLedgers->where('voucher_type', '!=', 0)->sum('credit');
+    //         }
+
+    //         $account->total_debit_opening_balance = $currentDebitOpeningBalance;
+    //         $account->total_credit_opening_balance = $currentCreditOpeningBalance;
+    //         $account->total_debit = $currentDebit;
+    //         $account->total_credit = $currentCredit;
+
+    //         $mainGroup->total_debit_opening_balance += $currentDebitOpeningBalance;
+    //         $mainGroup->total_credit_opening_balance += $currentCreditOpeningBalance;
+    //         $mainGroup->total_debit += $currentDebit;
+    //         $mainGroup->total_credit += $currentCredit;
+
+    //         unset($account->accountLedgers);
+    //     }
+
+    //     $subGroups = [];
+    //     if (count($mainGroup->subgroupsAccountsForOthers) > 0) {
+
+    //         $subGroups = $mainGroup->subgroupsAccountsForOthers;
+    //     }
+
+    //     foreach ($subGroups as $subGroup) {
+
+    //         foreach ($subGroup->accounts as $account) {
+
+    //             $currentDebitOpeningBalance = 0;
+    //             $currentCreditOpeningBalance = 0;
+    //             $currentDebit = 0;
+    //             $currentCredit = 0;
+
+    //             if ($fromDateYmd && $toDateYmd && $fromDateYmd > $accountStartDateYmd) {
+
+    //                 $currentDebitOpeningBalance = $account->accountLedgers->where('date', '<', $fromDateYmd)->sum('debit');
+
+    //                 $currentCreditOpeningBalance = $account->accountLedgers->where('date', '<', $fromDateYmd)->sum('credit');
+
+    //                 $date_range = [$fromDateYmd, $toDateYmd];
+    //                 $currentDebit = $account->accountLedgers->whereBetween('date', $date_range)->sum('debit');
+    //                 $currentCredit = $account->accountLedgers->whereBetween('date', $date_range)->sum('credit');
+    //             } elseif ($fromDateYmd && $toDateYmd && $fromDateYmd <= $accountStartDateYmd) {
+
+    //                 $date_range = [$fromDateYmd, $toDateYmd];
+    //                 $currentDebitOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->whereBetween('date', $date_range)->sum('debit');
+    //                 $currentCreditOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->whereBetween('date', $date_range)->sum('credit');
+
+    //                 $currentDebit = $account->accountLedgers->where('voucher_type', '!=', 0)->whereBetween('date', $date_range)->sum('debit');
+    //                 $currentCredit = $account->accountLedgers->where('voucher_type', '!=', 0)->whereBetween('date', $date_range)->sum('credit');
+    //             } else {
+
+    //                 $currentDebitOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->sum('debit');
+    //                 $currentCreditOpeningBalance = $account->accountLedgers->where('voucher_type', 0)->sum('credit');
+
+    //                 $currentDebit = $account->accountLedgers->where('voucher_type', '!=', 0)->sum('debit');
+    //                 $currentCredit = $account->accountLedgers->where('voucher_type', '!=', 0)->sum('credit');
+    //             }
+
+    //             $subGroup->total_debit_opening_balance += $currentDebitOpeningBalance;
+    //             $subGroup->total_credit_opening_balance += $currentCreditOpeningBalance;
+    //             $subGroup->total_debit += $currentDebit;
+    //             $subGroup->total_credit += $currentCredit;
+
+    //             $mainGroup->total_debit_opening_balance += $currentDebitOpeningBalance;
+    //             $mainGroup->total_credit_opening_balance += $currentCreditOpeningBalance;
+    //             $mainGroup->total_debit += $currentDebit;
+    //             $mainGroup->total_credit += $currentCredit;
+
+    //             unset($account->accountLedgers);
+    //         }
+
+    //         if (count($subGroup->subgroupsAccountsForOthers) > 0) {
+
+    //             subGroups($subGroup->subgroupsAccountsForOthers, $mainGroup, $subGroup, $fromDateYmd, $toDateYmd, $accountStartDateYmd);
+    //         }
+    //     }
+
+    //     foreach ($mainGroup->subgroupsAccountsForOthers as $subGroup) {
+
+    //         if (count($subGroup->subgroupsAccountsForOthers) > 0) {
+
+    //             unset($subGroup->accounts);
+    //             unset($subGroup->subgroupsAccountsForOthers);
+    //         }
+    //     }
+    // }
+
+    // return $mainGroups;
+});

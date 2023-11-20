@@ -1,0 +1,4 @@
+1. Uncomment / Removed un-used old buttons and put the id="exportButtonsContainer" attribute to their parent div
+2. Copy-Paste buttons: properties from existing working pages
+3. Put DataTable() object ina variable and do table.buttons().container().appendTo('#exportButtonsContainer');
+4. Test, Appropriate icons, position-margin-padding-colors, etc

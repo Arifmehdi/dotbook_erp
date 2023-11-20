@@ -1,0 +1,83 @@
+# ERP
+
+## HRM Module
+
+### Features List
+
+- [x] HrmDepartments
+- [x] Sections
+- [x] Sub-sections
+- [x] Shifts
+- [x] Manage Shifts
+- [x] Grades
+- [x] Designations
+- [x] BD Divisions
+- [x] BD Districts
+- [x] BD Upazillas/Thanas
+- [x] BD Unions/Post-offices
+- [x] Employees
+  - [x] Registration form
+  - [x] Manage employees (List, Edits, Actions, Exports, Filters)
+  - [x] Import employees
+  - [x] Appointment letters
+  - [x] Generate ID Card for employees
+  - [x] Shift change of employees
+  - [x] Promotions
+  - [x] Master list by employee designations
+  - [x] New arrivals
+  - [x] Left Employees
+  - [x] Resigned Employees
+  - [x] Trashed Employees
+  - [x] Resign/Left/Termination notices and letters
+  - [ ] Final settlement and calculations
+- [ ] Attendance
+  - [ ] Take attendance (Person/Section wise)
+  - [ ] Bulk imports from machine generated files (.txt, .csv, .excel) with format settings
+  - [ ] Bulk edits by Employee & Editing Month
+  - [ ] Missing attendance adjustments*
+  - [ ] In/Out time adjustments
+  - [ ] Overtimes (settings, reports, rates, buyer-modes consideration)
+  - [ ] Daily attendance report
+  - [ ] Check absence report
+  - [ ] Attendance rapid update
+  - [ ] Job card
+  - [ ] Job card summary
+  - [ ] DRA (Date range absence checker tool)
+- [x] Leave Types
+- [ ] Leave Applications
+- [ ] Leave Register
+- [ ] Leave Calculations
+- [ ] Leave Payments
+- [x] Holidays
+- [ ] Increments (Single/Section-wise) with Logs
+- [ ] Decrements (Single/Section-wise) with Logs
+- [ ] Payrolls
+  - [ ] Salary Generation (Excel, PDF)
+  - [ ] Payslip Generation (Excel, PDF)
+  - [ ] Manual Addition (OT/Cash) year+month wise
+  - [ ] Manual Deduction (OT/Cash) year+month wise
+- [ ] Settings
+  - [ ] Attendance settings
+  - [ ] Overtime settings
+  - [ ] Leave settings
+  - [ ] Salary settings
+  - [ ] Increment/Decrement settings
+- [ ] Reports
+  - [ ] Attendance reports
+  - [ ] Overtime reports
+  - [ ] Leave reports
+  - [ ] Salary reports
+  - [ ] Increment/Decrement reports
+
+### General Consideration
+
+- [ ] Locales (Multi-language)
+
+### Technical Consideration
+
+- [ ] Same design for UI components e.g.; tables, export buttons, modals, dropdowns, etc
+- [ ] Similar package for exporting Excel and PDF files
+- [ ] REST API for all functionalities
+- [ ] Soft deletes for all functionalities
+- [ ] Separate database connection (`hrm`)
+- [ ] Using entities/models over query builders

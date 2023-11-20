@@ -1,0 +1,12 @@
+{
+    "Asset": true,
+    "Communication": true,
+    "Contacts": true,
+    "Core": true,
+    "CRM": true,
+    "Documentation": true,
+    "HRM": true,
+    "LCManagement": true,
+    "Scale": true,
+    "Website": false
+}

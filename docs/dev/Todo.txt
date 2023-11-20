@@ -1,0 +1,5 @@
+- Http vs Https (SSL) tests with Scale for cloud
+- Perfect Email System with Background-job-queue, Custom templates, Settings with (permissions)
+- SMS System with settings and permissions
+- Whatsapp integration with settings and permissions
+

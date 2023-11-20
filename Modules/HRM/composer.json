@@ -1,0 +1,23 @@
+{
+    "name": "speeddigit/hrm",
+    "description": "",
+    "authors": [
+        {
+            "name": "SpeedDigit",
+            "email": "speeddigitinfo@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\HRM\\": ""
+        }
+    }
+}

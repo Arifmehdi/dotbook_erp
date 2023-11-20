@@ -1,0 +1,39 @@
+
+        "speeddigitteam/laravel-pdf": "dev-main",
+        "speeddigitteam/mpdf": "dev-master",
+        
+        
+            
+    
+    
+    
+    
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/speeddigitteam/laravel-pdf.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/speeddigitteam/mpdf.git"
+        }
+    ],
+        "speeddigitteam/laravel-pdf": "dev-main",
+        "speeddigitteam/mpdf": "dev-master",
+        
+        
+            
+    
+    
+    
+    
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/speeddigitteam/laravel-pdf.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/speeddigitteam/mpdf.git"
+        }
+    ],

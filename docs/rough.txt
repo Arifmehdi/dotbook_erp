@@ -1,0 +1,17 @@
+.input-group-text {
+    font-size: 10px;
+    padding: 3px;
+}
+
+"\s*\{\{\s*asset\('\s*'\)\s*\}\}([a-zA-Z_0-9.-/]+\s*)\s*"
+replaced with  "{{ asset('$1') }}"
+
+
+# Menu @lang('menu.hello')' issue fix regex:
+@lang\('\n\s*([\s\S]*?)\s*'\)
+@lang("$1")
+
+
+Add a class to textarea and ignroe other attributes, keep old classes as well.
+(<textarea\b[^>]*class="[^"]*)("[^>]*>)
+$1 ckEditor$2

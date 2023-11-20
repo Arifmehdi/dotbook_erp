@@ -1,0 +1,22 @@
+Accounting Integration:
+========================================================================================
+1. Download prod DB and import 
+2. Run php artisan migrate 
+3. Import account groups  by SQL
+4. 
+
+Create a Profit/Loss A/C account from GUI and update this account from direct db (1. is_fixed = 1; 2 = is_main_pl_account=1;)
+Update "Capital A/C" cols (1. is_fixed=1; 2. is_main_capital_account=1);
+Update "Labour Cost" as is_fixed=1; fixed_name=labour_cost
+Update "Scale Charge" as is_fixed=1; fixed_name=scale_charge
+Update "Transport Cost" as is_fixed=1; fixed_name=transport_cost
+Update "Others" as is_fixed=1; fixed_name=others
+
+5. Run rp:sync
+6. account_ledgers => TRUNCATE
+7. Run acc-fix command
+8. Run play command
+9.
+10.
+11.
+

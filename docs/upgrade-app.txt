@@ -1,0 +1,3 @@
+- truncate migrations 
+- generate migrations from fresh old db
+- write needed update migration and seeders

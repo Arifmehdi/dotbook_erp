@@ -1,0 +1,1 @@
+- asset_request vs assets table relations and set null vs cascade issue. As logics for cascade moved to main asset request migration [Need to be tested by moon]

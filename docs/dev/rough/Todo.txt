@@ -1,0 +1,27 @@
+- Search improvements
+- Backup local, server and other server
+- Menu builder
+- Role and permission 100% dynamic without controller code
+- Update and upgrade system
+- Localization, Time, Theme, RTL, Color, Fonts, etc settings
+- Version management
+- CI/CD pipeline
+- Performance improvements
+- Caching
+- Module settings
+- Authentication, forget password, verification email
+- Asset, LC role and permission on database and controller level
+- Super admin can't be deleted feature. Roles and permission front-end design related work.
+
+- Asset multiple file upload problem for asset images
+- Warranty date going to out of view port (on bottom area)
+
+Assigned 26/07/22 10:39AM
+
+- Add permission check to all controller of `asset` module
+php artisan db:seed --class=AssetManagerSeeder
+
+Asset Part Start
+-> in Revoke index -> the allocation form makes problem!
+-> As Asset Settings not created yet in the role permission part so the settings part is pending.
+->add Depreciation to audit part.

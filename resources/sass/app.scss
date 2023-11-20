@@ -1,0 +1,25 @@
+// @import "variables";
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"); // Bootstrap5 for UI & Layouts
+@import "../stylesheets/lib/data-table.min.css";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"); // ToastrJS For Alert & Notifications
+@import "../stylesheets/lib/fontawesome6/css/all.min.css";
+// @import url("https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css"); // jQuery Confirm, for confirmation and prompt
+
+
+@import "../stylesheets/lib/bootstrap.min.css";
+@import "../stylesheets/lib/toastr.css";
+@import "../stylesheets/lib/jquery-confirm.min.css";
+
+@import "../stylesheets/body.css";
+@import "../stylesheets/common.css";
+@import "../stylesheets/layout.css";
+@import "../stylesheets/theme-color.css";
+@import "../stylesheets/asset_style.css";
+
+@import "../stylesheets/calculator.css";
+@import "../stylesheets/reset.css";
+@import "../stylesheets/typography.css";
+@import "../stylesheets/body2.css";
+@import "../stylesheets/common2.css";
+@import "../stylesheets/style.css";
+@import "../stylesheets/module-permission.css";

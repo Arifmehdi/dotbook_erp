@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('cost_centre_categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('display_name')->nullable();
+            $table->unsignedBigInteger('parent_category_id')->nullable();
+            $table->boolean('use_in_expense_items')->default(0);
+            $table->boolean('use_in_income_items')->default(0);
+            $table->timestamps();
+
+            $table->foreign('parent_category_id')->references('id')->on('cost_centre_categories')->onDelete('cascade');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('cost_centre_categories');
+    }
+};

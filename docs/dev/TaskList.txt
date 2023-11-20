@@ -1,0 +1,90 @@
+Assigned to: Nymul Islam Moon
+
+03/08/2022
+
+1. Asset Warranty not working.
+2. Asset Edit part not working when warranty is added.
+3. Revoke Page not showing data.
+4. depreciation method has a problem there is only one calculation straight-line. But the condition has gone for other methods. Search for (lee_asset_depreciation_1)
+5. In Asset Requested part date filter not working!
+6. In asset licenses part filter problem as. licenses to email, purchase date, expire date, termination date.
+7. Licenses update part make a condition to stop selecting the other depreciation method (cause only one part calculation is done other calculation not get yet)
+8. Licenses Add part make a condition to stop selecting the other depreciation method (cause only one part calculation is done other calculation not get yet)
+9. licenses edit part manufacturer select option problem it is showing data which is added in manufacturer filed!
+10. asset update part additional file new attach not working.
+11. ADD  condition in Asset addition for the depreciation method select option cause only straight-line is active so make a condition to stop selecting the othe option!
+12. in Allocation part when an asset is not allow to allocated and user try to allocate it program shows a message but in green color it will me red color error message!
+13. In Allocation Section When user try to allocate over quantity of asset it shows error but the modal page loading problem shows and  not able to reuse the modal!
+
+04/08/2022
+
+1. Revoke Page not showing data.
+2. after adding allocation the additional module of allocation holds old data and did not allow to add data without refresh.
+3. allocation part refactoring.
+4. allocation page edit delete reload problem.
+5. allocation over quantity shows no message and just a green sign problem!
+6. allocation button turns on un-submittable button problem!
+7. pressing the cross option in modal did not refresh the modal!
+8  Asset allocation edit page allow to update without value! make necessary fields require.
+9. allocation page edit part shows no messages for over asset allocation and just shows an alert in green signal.
+10. Allocation delete while in revoke must be stop it to delete while it is revoke section!
+
+11. in Allocation part when an asset is not allow to allocated and user try to allocate it program shows a message but in green color it will me red color error message!
+12. In Allocation Section When user try to allocate over quantity of asset it shows error but the modal page loading problem shows and  not able to reuse the modal!
+
+06/08/2022
+1. Asset Allocation revoke calculation fixed
+2. Asset table new column added
+3. Allocation table new column added
+4. allocation and revoke filter problem
+
+
+07/08/2022
+1. Asset warranty part problem (fixing)
+    Test Cases :
+    -> check without adding warranty at first and than add warranty
+    -> add warranty at first than delete all from edit
+    -> add warranty first than delete some
+    -> add warranty first than delete some and add some
+    -> create asset without warranty and add some, delete some
+2. Asset controller line number 397 problem is if the asset created with out any additional files than after additional files added it shows error cause in the code it is adding the old files to new files but the old files initially is empty!
+3. when an asset allocated already then no one can't change the allocatable option in asset edit part
+4. one can allocate asset between it's purchase date to expire date (addition)
+5. fix asset insert date as purchase date after the expire date!!
+
+
+08/08/2022
+1. Add Components to data base and change in asset edit page and add components edit part in asset edit . (asset section)   ..done
+2. add asset date validation as asset purchase date must be before expire date. validation in addition and edit modal.      ..done
+
+3  Asset edit option additional file delete message shows in green light                                                    ..done
+4. Asset edit option Image file delete message shows in green light                                                         ..done
+5. asset delete message not showing only green signal shows                                                                 ..done
+6. allocation edit date validation                                                                                          ..done
+7. revoke date validation in allocation                                                                                     ..done
+8. revoke table edit date validation                                                                                        ..done
+9. revoke edit panel remove asset dropdown there will bw no asset selection                                                 ..done
+10. Licenses manufacturer added in edit option and validate                                                                 ..done
+11. allocation edit model hide after date validation condition caught.                                                      ..done
+12. Revoke date validation shows green message in allocation section it should be red                                       ..done
+13. Revoke edit date validation message in green should be red!                                                             ..done
+
+
+09/08/22
+1. manufacturer delete condition added if it is in use.                                                                     ..done
+2. allocation delete stopped but shows in green.                                                                            ..done
+3. components delete while in use have to stop it while it is in use on assets!                                             ..done
+4. allocation date validation problem fixed                                                                                 ..done
+5. Asset date validation in edit part asset                                                                                 ..done
+
+
+NEW WORK
+1. Add Suppliers for asset.      working...
+2. Asset Reports.
+
+
+15/09/2022
+1. Sales Report -> Sale Statements -> pdf Broken.
+2. Sales Report -> Sale Statements -> print file logo not found.
+3. Sale Report -> Sales Order Statements -> pdf excel problem.
+4. Sale Report -> Cash Register Reports-> Print Not Working.

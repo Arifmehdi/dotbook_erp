@@ -1,0 +1,13 @@
+nginx -t
+service nginx status
+service php8.1-fpm status
+sudo service nginx restart
+sudo ln -S /etc/nginx/sites-available/erp.conf /etc/nginx/sites-enabled/
+sudo ln -S /etc/nginx/sites-available/phpmyadmin.conf /etc/nginx/sites-enabled/
+
+max_execution_time 180
+memory_limit 128M
+post_max_size 64M
+upload_max_filesize 32M
+max_input_time = 60
+max_input_vars = 3000

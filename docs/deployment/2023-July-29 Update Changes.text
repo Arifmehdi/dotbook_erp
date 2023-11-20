@@ -1,0 +1,3 @@
+- default_sale_discount_type to sale setting
+
+designation_parent_id column added to designations table

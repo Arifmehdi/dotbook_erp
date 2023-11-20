@@ -1,0 +1,4 @@
+`sale_products` table
+
+do_qty
+do_delivered_qty

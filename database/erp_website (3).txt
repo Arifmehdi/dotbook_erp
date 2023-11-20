@@ -1,0 +1,1528 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Aug 07, 2023 at 04:24 AM
+-- Server version: 10.2.6-MariaDB-log
+-- PHP Version: 8.1.7
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `erp_website`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about_us`
+--
+
+CREATE TABLE `about_us` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `about` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mission` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `vission` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `quality` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `ideas` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `about_us`
+--
+
+INSERT INTO `about_us` (`id`, `about`, `mission`, `vission`, `quality`, `ideas`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, '<p>ASBRM, part of Majumder Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron &amp; Steel in country under the brand name \"ASBRM\" with a product range of 8mm to 40mm TMT 500W Bar, 10mm to 40mm 400/300 Grade Bar.Within a short span of time ASBRM has established a good will in the market for its high quality product and services. The objective of providin</p>', '<p>ASBRM, part of Majumder Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron &amp; Steel in country under the brand name \"ASBRM\" with a product range of 8mm to 40mm TMT 500W Bar, 10mm to 40mm 400/300 Grade Bar.Within a short span of time ASBRM has established a good will in the market for its high quality product and services. The objective of providin</p>', '<p>ASBRM, part of Majumder Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron &amp; Steel in country under the brand name \"ASBRM\" with a product range of 8mm to 40mm TMT 500W Bar, 10mm to 40mm 400/300 Grade Bar.Within a short span of time ASBRM has established a good will in the market for its high quality product and services. The objective of providin</p>', '<p>ASBRM, part of Majumder Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron &amp; Steel in country under the brand name \"ASBRM\" with a product range of 8mm to 40mm TMT 500W Bar, 10mm to 40mm 400/300 Grade Bar.Within a short span of time ASBRM has established a good will in the market for its high quality product and services. The objective of providin</p>', '<p>ASBRM, part of Majumder Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron &amp; Steel in country under the brand name \"ASBRM\" with a product range of 8mm to 40mm TMT 500W Bar, 10mm to 40mm 400/300 Grade Bar.Within a short span of time ASBRM has established a good will in the market for its high quality product and services. The objective of providin</p>', 'http://erp.test/uploads/website/pages/1764964812085290.png', '2023-05-03 04:55:17', '2023-05-04 12:00:10', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `awards`
+--
+
+CREATE TABLE `awards` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `awards`
+--
+
+INSERT INTO `awards` (`id`, `title`, `link`, `description`, `image`, `slug`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Top taxpayers honored', 'https://www.wordstream.com/blog/ws/2017/07/19/customer-testimonial-examples', 'It was a day of recognition for tax compliance and the joy of being honoured. This recognition came from the National Board of Revenue (NBR).\r\n\r\nIn a bid to encourage compliance and bring more people under the tax net in a country where avoidance and evasion are rampant, the NBR yesterday honored the highest taxpayers with tax cards and crests for abiding the rules.', 'http://erp.test/uploads/website/award/1765237870715996.jpg', 'top-taxpayers-honored', 1, '2023-05-03 10:17:17', '2023-05-07 12:20:19', NULL),
+(5, 'Top taxpayers honored', 'https://www.wordstream.com/blog/ws/2017/07/19/customer-testimonial-examples', 'It was a day of recognition for tax compliance and the joy of being honoured. This recognition came from the National Board of Revenue (NBR).\r\n\r\nIn a bid to encourage compliance and bring more people under the tax net in a country where avoidance and evasion are rampant, the NBR yesterday honored the highest taxpayers with tax cards and crests for abiding the rules.', 'http://erp.test/uploads/website/award/1765237870715996.jpg', 'top-taxpayers-honored', 1, '2023-05-03 10:17:17', '2023-05-07 12:20:19', NULL),
+(6, 'Top taxpayers honored', 'https://www.wordstream.com/blog/ws/2017/07/19/customer-testimonial-examples', 'It was a day of recognition for tax compliance and the joy of being honoured. This recognition came from the National Board of Revenue (NBR).\r\n\r\nIn a bid to encourage compliance and bring more people under the tax net in a country where avoidance and evasion are rampant, the NBR yesterday honored the highest taxpayers with tax cards and crests for abiding the rules.', 'http://erp.test/uploads/website/award/1765237870715996.jpg', 'top-taxpayers-honored', 1, '2023-05-03 10:17:17', '2023-05-07 12:20:19', NULL),
+(7, 'Top taxpayers honored', 'https://www.wordstream.com/blog/ws/2017/07/19/customer-testimonial-examples', 'It was a day of recognition for tax compliance and the joy of being honoured. This recognition came from the National Board of Revenue (NBR).\r\n\r\nIn a bid to encourage compliance and bring more people under the tax net in a country where avoidance and evasion are rampant, the NBR yesterday honored the highest taxpayers with tax cards and crests for abiding the rules.', 'http://erp.test/uploads/website/award/1765237870715996.jpg', 'top-taxpayers-honored', 1, '2023-05-03 10:17:17', '2023-05-07 12:20:19', NULL),
+(8, 'Top taxpayers honored', 'https://www.wordstream.com/blog/ws/2017/07/19/customer-testimonial-examples', 'It was a day of recognition for tax compliance and the joy of being honoured. This recognition came from the National Board of Revenue (NBR).\r\n\r\nIn a bid to encourage compliance and bring more people under the tax net in a country where avoidance and evasion are rampant, the NBR yesterday honored the highest taxpayers with tax cards and crests for abiding the rules.', 'http://erp.test/uploads/website/award/1765237870715996.jpg', 'top-taxpayers-honored', 1, '2023-05-03 10:17:17', '2023-05-07 12:20:19', NULL),
+(9, 'Top taxpayers honored', 'https://www.wordstream.com/blog/ws/2017/07/19/customer-testimonial-examples', 'It was a day of recognition for tax compliance and the joy of being honoured. This recognition came from the National Board of Revenue (NBR).\r\n\r\nIn a bid to encourage compliance and bring more people under the tax net in a country where avoidance and evasion are rampant, the NBR yesterday honored the highest taxpayers with tax cards and crests for abiding the rules.', 'http://erp.test/uploads/website/award/1765237870715996.jpg', 'top-taxpayers-honored', 1, '2023-05-03 10:17:17', '2023-05-07 12:20:19', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banners`
+--
+
+CREATE TABLE `banners` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner1` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner2` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner3` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner4` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner5` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `banner6` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `banners`
+--
+
+INSERT INTO `banners` (`id`, `title`, `banner1`, `banner2`, `banner3`, `banner4`, `banner5`, `banner6`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'fghdf htdrthfth fth', NULL, 'uploads/website/banner/1764869878047463.webp', 'uploads/website/banner/1764869878278422.webp', 'uploads/website/banner/1764869878444540.jpg', 'uploads/website/banner/1764869879044834.jpg', 'uploads/website/banner/1764869879156948.webp', '2023-05-03 10:51:15', '2023-05-03 10:51:15', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blogs`
+--
+
+CREATE TABLE `blogs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `blog_categories_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tags` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `blog_categories_id`, `user_id`, `title`, `slug`, `image`, `description`, `tags`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 1, 1, 'How to set up Laravel WebSockets on a subdomain', 'how-to-set-up-laravel-websockets-on-a-subdomain', 'http://erp.test/uploads/website/blog/1765141614266461.jpg', 'WebSockets are an essential part of many modern web applications. With WebSockets, you can create applications that update in real-time without the need to reload the page or continually poll the server for changes.\r\n\r\nLaravel supports two server-side broadcasting drivers out of the box: Pusher and Ably. While these two solutions may be easier to set up and can provide additional functionalities, they are both commercial solutions. This makes them unideal if you’re on a tight budget or if you’re simply looking for an open source solution.\r\n\r\nLaravel WebSockets is a great open source alternative. It allows you to easily add WebSocket support to your Laravel >5.7 application. It comes with a debug dashboard and real-time statistics, among other features.', 'ubdomain WebSockets', 0, '2023-05-06 10:50:22', '2023-05-07 12:37:42', '2023-05-07 12:37:42'),
+(2, 2, 1, 'The relationship between Laravel WebSockets and Pusher', 'the-relationship-between-laravel-websockets-and-pusher', 'http://erp.test/uploads/website/blog/1765141653231832.webp', 'Before we begin learning how to set up and use Laravel WebSockets on a subdomain, let’s go over some background information on the relationship between Laravel WebSockets and Pusher to prevent any confusion.\r\n\r\nWhen using Laravel WebSockets, you are supposed to set Laravel’s BROADCAST_DRIVER configuration to pusher. You should also set other pusher configurations, like PUSHER_APP_ID, PUSHER_APP_KEY, and PUSHER_APP_SECRET, as well as install the pusher/pusher-php-server composer package.', 'The best way to perfect your writin', 0, '2023-05-06 10:50:59', '2023-05-06 10:50:59', NULL),
+(3, 4, 1, 'Engineering Post Title Goes Here', 'engineering-post-title-goes-here', 'http://erp.test/uploads/website/blog/1765235363722346.jpg', 'Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus.\r\n\r\n\r\n\r\n\r\nDonec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt. Pellentesque in ipsum id orci porta dapibus. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Donec sollicitudin molestie malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Cras ultricies ligula sed magna dictum porta. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Proin eget tortor risus.', 'Engineering', 1, '2023-05-07 11:40:29', '2023-05-07 12:37:46', '2023-05-07 12:37:46'),
+(4, 5, 1, 'Est labore consequat', 'est-labore-consequat', 'http://erp.test/uploads/website/blog/1765235409850580.jpg', 'Est labore consequat', 'Est labore consequat', 1, '2023-05-07 11:41:12', '2023-05-07 11:41:12', NULL),
+(5, 5, 1, 'Ullamco temporibus l', 'ullamco-temporibus-l', 'http://erp.test/uploads/website/blog/1765235444477910.jpg', 'Ullamco temporibus l', 'Ullamco temporibus l', 1, '2023-05-07 11:41:45', '2023-05-07 11:41:45', NULL),
+(6, 6, 1, 'Quia praesentium dol', 'quia-praesentium-dol', 'http://erp.test/uploads/website/blog/1765235483906538.jpg', 'Description is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice it would be difficult to write literature that drew on just one of the four basic modes\r\n\r\nDescription is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice it would be difficult to write literature that drew on just one of the four basic modes', 'Quia praesentium dol', 1, '2023-05-07 11:42:23', '2023-05-07 11:42:23', NULL),
+(7, 5, 1, 'Quos labore odit dol', 'quos-labore-odit-dol', 'http://erp.test/uploads/website/blog/1765235505151971.jpg', 'Description is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice it would be difficult to write literature that drew on just one of the four basic modesDescription is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice it would be difficult to write literature that drew on just one of the four basic modes', 'Quos labore odit dol', 1, '2023-05-07 11:42:43', '2023-05-07 11:42:43', NULL),
+(8, 7, 1, 'Et error cillum fugi', 'et-error-cillum-fugi', 'http://erp.test/uploads/website/blog/1765235545132878.jpg', 'Description is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice it would be difficult to write literature that drew on just one of the four basic modes\r\n\r\nDescription is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice it would be difficult to write literature that drew on just one of the four basic modes\r\nDescription is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice it would be difficult to write literature that drew on just one of the four basic modes', 'Et error cillum fugi', 1, '2023-05-07 11:43:21', '2023-05-07 11:43:21', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog_categories`
+--
+
+CREATE TABLE `blog_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `blog_categories`
+--
+
+INSERT INTO `blog_categories` (`id`, `name`, `slug`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Samsung', 'samsung', 1, '2023-05-02 10:19:03', '2023-05-07 11:36:55', '2023-05-07 11:36:55'),
+(2, 'MachineB', 'machine-books', 1, '2023-05-02 10:19:14', '2023-05-07 11:37:00', '2023-05-07 11:37:00'),
+(3, 'New Classified Product', 'new-classified-product', 1, '2023-05-02 10:23:02', '2023-05-02 10:23:11', '2023-05-02 10:23:11'),
+(4, 'Gabriel Mason', 'gabriel-mason', 1, '2023-05-07 11:36:15', '2023-05-07 11:36:15', NULL),
+(5, 'Glenna Soto', 'glenna-soto', 1, '2023-05-07 11:36:26', '2023-05-07 11:36:26', NULL),
+(6, 'Wylie Buckley', 'wylie-buckley', 1, '2023-05-07 11:36:38', '2023-05-07 11:36:38', NULL),
+(7, 'Engineering', 'engineering', 1, '2023-05-07 11:36:47', '2023-05-07 11:36:47', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `buyer_requisitions`
+--
+
+CREATE TABLE `buyer_requisitions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `company` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `buyer_requisitions`
+--
+
+INSERT INTO `buyer_requisitions` (`id`, `company`, `email`, `phone`, `address`, `message`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Pesco Fashion Ltd', 'admin@example.com', '+1 (706) 879-4136', 'Quam ipsa culpa qu', 'dsfgsdfg', '2023-05-06 05:28:34', '2023-05-06 05:28:34', NULL),
+(2, 'A', 'C', 'D', 'B', 'E', '2023-05-06 11:54:19', '2023-05-06 11:54:19', NULL),
+(3, 'Alston Lynn Co', 'dypu@mailinator.com', '+1 (965) 468-2185', 'Cupidatat labore har', 'Saepe odio dolor quo', '2023-05-15 06:20:12', '2023-05-15 06:20:12', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `campaigns`
+--
+
+CREATE TABLE `campaigns` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `thumbnail` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `campaigns`
+--
+
+INSERT INTO `campaigns` (`id`, `title`, `slug`, `thumbnail`, `description`, `image`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Campaign 01', 'campaign-01', 'http://erp.test/uploads/website/campaign/1765134025627823.jpg', 'Description is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice', '[\"http:\\/\\/erp.test\\/uploads\\/website\\/campaign\\/1765134078190105.png\",\"http:\\/\\/erp.test\\/uploads\\/website\\/campaign\\/1765134078351652.jpg\"]', 1, '2023-05-03 08:35:03', '2023-05-06 08:50:35', NULL),
+(2, 'Campaign 02', 'campaign-02', 'http://erp.test/uploads/website/campaign/1765134040148526.jpg', 'Description is the pattern of narrative development that aims to make vivid a place, object, character, or group. Description is one of four rhetorical modes, along with exposition, argumentation, and narration. In practice', '[\"http:\\/\\/erp.test\\/uploads\\/website\\/campaign\\/1765134104955457.jpg\",\"http:\\/\\/erp.test\\/uploads\\/website\\/campaign\\/1765134105090515.png\"]', 1, '2023-05-03 08:45:35', '2023-05-06 08:51:01', NULL),
+(3, 'drgzsrg', 'drgzsrg', 'http://erp.test/uploads/website/campaign/1764862059452432.jpg', 'rgregzsrg', NULL, 1, '2023-05-03 08:46:58', '2023-05-03 08:47:50', '2023-05-03 08:47:50');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cities`
+--
+
+CREATE TABLE `cities` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `city_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cities`
+--
+
+INSERT INTO `cities` (`id`, `city_name`, `status`, `country_id`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Dhaka', '1', 2, '2023-05-13 06:40:11', '2023-05-13 07:30:20', NULL),
+(2, 'Khulna', '1', 2, '2023-05-13 06:40:34', '2023-05-13 06:40:34', NULL),
+(3, 'Rangpur', '0', 2, '2023-05-13 06:40:50', '2023-05-13 07:31:55', NULL),
+(4, 'Barisal', '1', 2, '2023-05-13 06:41:04', '2023-05-13 06:41:04', NULL),
+(5, 'Fghh', '1', 4, '2023-05-13 07:36:13', '2023-05-13 07:36:21', '2023-05-13 07:36:21');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clients`
+--
+
+CREATE TABLE `clients` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(80) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `comments` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`id`, `name`, `email`, `phone`, `slug`, `designation`, `comments`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'ITCL', NULL, NULL, 'itcl', 'CEO,  Speeddigit PVt. Ltd', '<span style=\"font-family: &quot;Times New Roman&quot;; font-size: medium;\">Condimentum maximus pharetra maecenas rutrum proin at augue. Taciti ac tempus amet pharetra nulla. Orci cursus eget vivamus. Integer morbi convallis aptent malesuada. Imperdiet id habitasse nunc. Donec viverra facilisis primis scelerisque. Rhoncus letius nullam condimentum.</span>', 'uploads/asbrm/client/1703624645581690.jpg', '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(2, 'M/S. A. WASIM TRADERS', NULL, NULL, 'ms-a-wasim-traders', 'CEO,  Speeddigit PVt. Ltd', '<span style=\"font-family: &quot;Times New Roman&quot;; font-size: medium;\">Condimentum maximus pharetra maecenas rutrum proin at augue. Taciti ac tempus amet pharetra nulla. Orci cursus eget vivamus. Integer morbi convallis aptent malesuada. Imperdiet id habitasse nunc. Donec viverra facilisis primis scelerisque. Rhoncus letius nullam condimentum.</span>', 'uploads/asbrm/client/1703624673872720.jpg', '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(3, 'M/S. A.AHAD CORPORATION', NULL, NULL, 'ms-aahad-corporation', 'CEO, Burak Limited', '<span style=\"font-family: &quot;Times New Roman&quot;; font-size: medium;\">Condimentum maximus pharetra maecenas rutrum proin at augue. Taciti ac tempus amet pharetra nulla. Orci cursus eget vivamus. Integer morbi convallis aptent malesuada. Imperdiet id habitasse nunc. Donec viverra facilisis primis scelerisque. Rhoncus letius nullam condimentum.</span>', 'uploads/asbrm/client/1703624686441744.jpg', '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(4, 'M/S. A.R. STEEL LIMITED', NULL, NULL, 'ms-ar-steel-limited', 'CEO,  Speeddigit PVt. Ltd', '<span style=\"font-family: &quot;Times New Roman&quot;; font-size: medium;\">Condimentum maximus pharetra maecenas rutrum proin at augue. Taciti ac tempus amet pharetra nulla. Orci cursus eget vivamus. Integer morbi convallis aptent malesuada. Imperdiet id habitasse nunc. Donec viverra facilisis primis scelerisque. Rhoncus letius nullam condimentum.</span>', 'uploads/asbrm/client/1703624705385356.jpg', '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(5, 'M/S. FATEMA ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(6, 'M/S. H.M. CORPORATION\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(7, 'M/S. HABU MILKY\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(8, 'M/S. HAJI TRADERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(9, 'M/S. HARUN TRADERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(10, 'M/S. HRIDOY ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(11, 'M/S. IRIN STORE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(12, 'M/S. ISHAMOTI CORPORATION\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(13, 'M/S. ISLAM & BROTHERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(14, 'M/S. ISLAM TRADERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(15, 'M/S. ISTIA TRADERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(16, 'M/S. J.K. ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(17, 'M/S. JALIL IRON\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:23', '2023-05-07 11:16:23', NULL),
+(18, 'M/S. JAMAL & BROTHERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(19, 'M/S. JITU ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(20, 'M/S. JOBBAR ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(21, 'M/S. JONY STEEL\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(22, 'M/S. KAMAL ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(23, 'M/S. LITON ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(24, 'M/S. M.M. ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(25, 'M/S. MAA & KEYA STEEL STORE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(26, 'M/S. MADINA TRADING LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(27, 'M/S. MAKSUD STEEL LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(28, 'M/S. MANNAN STEEL LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(29, 'M/S. MASCOT INDUSTRIES LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(30, 'M/S. MASHIN CORPORATION\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(31, 'M/S. MAYER DOA CORPORATION\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(32, 'M/S. MELISHS ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(33, 'M/S. METROCEM TRADE LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(34, 'M/S. MOLLAH & BROTHERS LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(35, 'M/S. MR. HABIB SAHEB\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(36, 'M/S. MR. SAKHAWAT SAHEB\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(37, 'M/S. MR. SHAHIN SAHEB\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(38, 'M/S. NAYEEM ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(39, 'M/S. NEW S.M. STEEL HOUSE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(40, 'M/S. NUR ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(41, 'M/S. NUR JAHAN STEEL\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(42, 'M/S. PIYAL TRADERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(43, 'M/S. RAHAD ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(44, 'M/S. RAHMAT ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(45, 'M/S. RAJU ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(46, 'M/S. SAHEB ALI SARKER\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(47, 'M/S. SAIDUL ISLAM\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(48, 'M/S. SAJU ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(49, 'M/S. SARKER TRADERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(50, 'M/S. SATATA & COMPANY LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(51, 'M/S. SELIM ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(52, 'M/S. SHAHIN & BROTHERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(53, 'M/S. SHAJAHAN BROTHERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(54, 'M/S. SHAKIL ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(55, 'M/S. SHARIF SAHEB\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(56, 'M/S. SHARMIN ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(57, 'M/S. SOBNOM STEEL LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(58, 'M/S. SONALI ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(59, 'M/S. STEEL CORPORATION\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(60, 'M/S. STEEL KING LTD.\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(61, 'M/S. SULTAN & SONS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(62, 'M/S. SUMON & BROTHERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(63, 'M/S. SWAPON & BROTHERS\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(64, 'M/S. TAJ IRON\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:24', '2023-05-07 11:16:24', NULL),
+(65, 'M/S. TIPU & COMPANY\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:25', '2023-05-07 11:16:25', NULL),
+(66, 'M/S. TRISHNA ENTERPRISE\n          ', NULL, NULL, NULL, NULL, NULL, NULL, '2023-05-07 11:16:25', '2023-05-07 11:16:25', NULL),
+(67, 'Hayley Bry', 'admin@gmail.com', '+1 (273) 194-1978', 'hayley-bry', 'Developer', 'fsdfg', 'http://erp.test/uploads/website/client/1765939927061235.jpg', '2023-05-15 06:19:13', '2023-05-15 06:19:13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comments`
+--
+
+CREATE TABLE `comments` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `blog_id` int(11) NOT NULL,
+  `website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `comments`
+--
+
+INSERT INTO `comments` (`id`, `name`, `email`, `user_id`, `blog_id`, `website`, `message`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Hayley Bry', 'admin@gmail.com', 0, 2, 'https://www.fecab.com.au', 'Hello Comment', 0, '2023-05-06 10:56:06', '2023-05-06 10:56:06', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `subject` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `subject`, `message`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'dfgzdsg', 'rfgrsgf', '76756756', 'dfghdxgh', 'dfghdxfgh', 0, NULL, '2023-05-03 11:38:46', '2023-05-03 11:38:46'),
+(2, 'Jewel', 'je@gmail.com', '014076756756', 'good service', 'good service', 0, NULL, NULL, NULL),
+(3, 'Jewel', 'je@gmail.com', '014076756756', 'good service', 'good service', 0, NULL, NULL, NULL),
+(4, 'John Doe', 'john@g', NULL, NULL, 'Messsage goes here.', 0, '2023-05-06 11:46:28', '2023-05-06 11:46:56', '2023-05-06 11:46:56');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `countries`
+--
+
+CREATE TABLE `countries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `countries`
+--
+
+INSERT INTO `countries` (`id`, `name`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'England', '1', '2023-05-13 05:35:54', '2023-05-13 05:50:26', NULL),
+(2, 'Bangladesh', '1', '2023-05-13 05:36:18', '2023-05-13 05:52:37', NULL),
+(3, 'India', '1', '2023-05-13 05:50:44', '2023-05-13 05:50:44', NULL),
+(4, 'Pakistan', '1', '2023-05-13 05:50:59', '2023-05-13 05:50:59', NULL),
+(5, 'Sri Lanka', '1', '2023-05-13 05:51:24', '2023-05-13 05:51:24', NULL),
+(6, 'Afghanistan', '1', '2023-05-13 05:52:15', '2023-05-13 05:52:15', NULL),
+(7, 'Dhaka', '1', '2023-05-13 06:36:57', '2023-05-13 06:36:57', NULL),
+(8, 'Dhaka', '1', '2023-05-13 06:39:04', '2023-05-13 06:39:04', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `dealer_requests`
+--
+
+CREATE TABLE `dealer_requests` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact_address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shopname` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nid` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `region` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `remarks` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `shop_address` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `date` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `dealer_requests`
+--
+
+INSERT INTO `dealer_requests` (`id`, `name`, `phone`, `email`, `contact_address`, `shopname`, `nid`, `region`, `remarks`, `shop_address`, `date`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Al hassan', '87567457456', 'al@gmail.com', 'Dhaka', 'Shoip', '567456546456', 'fhfghn', 'cfgnbg', 'cvbncfgn', NULL, NULL, '2023-05-03 12:34:37', '2023-05-03 12:34:37'),
+(2, 'Al hassan', '87567457456', 'al@gmail.com', 'Dhaka', 'Shoip', '567456546456', 'fhfghn', 'cfgnbg', 'cvbncfgn', NULL, NULL, '2023-05-03 12:34:09', '2023-05-03 12:34:09'),
+(3, 'Hayley Bry', '+1 (273) 194-1978', 'admin@gmail.com', 'Dhaka', 'admin', '124242424242', NULL, 'admin', 'Dhaka', '06, May ,2023', NULL, NULL, NULL),
+(4, 'A', 'B', NULL, NULL, 'C', 'D', NULL, NULL, NULL, '06, May ,2023', NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `director_messages`
+--
+
+CREATE TABLE `director_messages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `message` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `director_messages`
+--
+
+INSERT INTO `director_messages` (`id`, `name`, `message`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Al Hassan', 'Curabitur aliquet quam id dui posuere blandit. Curabitur aliquet quam id dui posuere blandit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Donec sollicitudin molestie malesuada. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus. \r\nCurabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. \r\nProin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\r\nThank you, \r\nMr. Chairman Name', 'http://erp.test/uploads/website/pages/1764964500888772.webp', '2023-05-03 05:44:41', '2023-05-04 11:55:13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `districts`
+--
+
+CREATE TABLE `districts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `division_id` int(11) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `bn_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lat` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `lon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `faqs`
+--
+
+CREATE TABLE `faqs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `question` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `answer` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `faqs`
+--
+
+INSERT INTO `faqs` (`id`, `question`, `answer`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'fghfgergh ergh rrr', 'hfghdfg dr ghsergherg errrr', 0, '2023-05-03 11:14:54', '2023-05-03 11:23:15', '2023-05-03 11:23:15'),
+(2, 'dxfgdfg', 'fghxfgh', 0, '2023-05-03 11:16:08', '2023-05-03 11:22:51', '2023-05-03 11:22:51'),
+(3, 'What is the strongest grade?', 'Type 440 – which is a higher grade of cutlery steel which has a higher percentage of carbon, has much better edge retention when properly heat-treated. It can be hardened to approximately Rockwell 58 hardness, making it one of the hardest stainless steels', 1, '2023-05-03 11:20:25', '2023-05-03 11:20:25', NULL),
+(4, 'Which is the most used type?', '304 Stainless Steel or Type 304 the most common grade; the classic 18/8 (18% chromium, 8% nickel) stainless steel. Outside of the US, it is commonly known as “A2 stainless steel”, in accordance with ISO 3506 (not to be confused with A2 tool steel)', 1, '2023-05-03 11:20:57', '2023-05-03 11:20:57', NULL),
+(5, 'dxfgdfg', 'dfsdf', 1, '2023-05-07 11:30:57', '2023-05-07 11:31:08', '2023-05-07 11:31:08'),
+(6, 'Is steel a sustainable material?', 'Steel is a uniquely sustainable material because once it is made it can be used, like steel, forever. Steel is infinitely recycled, so the investment in making steel is never wasted and can be capitalized on by future generations.', 1, '2023-05-07 11:31:21', '2023-05-07 11:31:21', NULL),
+(7, 'What are the 4 types of steel?', 'Carbon Steel Carbon steels contain Iron, Carbon, and other alloying elements such as Manganese, Silicon, and Copper. Alloy Steel Alloy steels contain common alloy metals in varying proportions, which makes this type of steel suitable for specific applications. Stainless Steel Although stainless steels comprise of several metal alloys, they usually contain 10-20 percent chromium, making it...', 1, '2023-05-07 11:31:36', '2023-05-07 11:31:36', NULL),
+(8, 'One of the most frequently asked questions about steel; What is steel and how is it made?', 'When Iron is alloyed with carbon and other elements it is called steel. The resultant alloy has applications as the main component of buildings, infrastructure, tools, ships, automobiles, machines, various appliances, and weapons. The uses are myriad because of steel\'s high tensile strength and relatively low cost.', 1, '2023-05-07 11:31:50', '2023-05-07 11:31:50', NULL),
+(9, 'What is the difference between Iron and Steel?', 'Iron is a naturally occurring element found in nature within Iron Ore. Iron is the main component of Steel, which is an alloy of Iron with the main addition of Steel. Steel is stronger than Iron, with better tension and compression properties.', 1, '2023-05-07 11:32:05', '2023-05-07 11:32:05', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gallery_category_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `image`, `gallery_category_id`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'http://erp.test/uploads/website/gallery/1764960961144738.webp', 1, 1, '2023-05-02 08:46:01', '2023-05-07 11:57:12', '2023-05-07 11:57:12'),
+(2, 'http://erp.test/uploads/website/gallery/1764961388540993.jpg', 3, 1, '2023-05-02 08:46:40', '2023-05-07 12:17:38', '2023-05-07 12:17:38'),
+(3, 'uploads/website/gallery/1764771532135246.webp', 1, 1, '2023-05-02 08:48:04', '2023-05-02 08:54:27', '2023-05-02 08:54:27'),
+(4, 'http://erp.test/uploads/website/gallery/1764960992119356.webp', 3, 1, '2023-05-02 08:55:35', '2023-05-07 12:17:43', '2023-05-07 12:17:43'),
+(5, 'http://erp.test/uploads/website/gallery/1764961086967416.webp', 1, 1, '2023-05-04 11:00:58', '2023-05-07 12:17:47', '2023-05-07 12:17:47'),
+(6, 'http://erp.test/uploads/website/gallery/1765236614982065.jpg', 6, 1, '2023-05-07 12:00:22', '2023-05-07 12:00:22', NULL),
+(7, 'http://erp.test/uploads/website/gallery/1765237097144051.jpg', 5, 1, '2023-05-07 12:08:02', '2023-05-07 12:08:02', NULL),
+(8, 'http://erp.test/uploads/website/gallery/1765237613617297.jpg', 5, 1, '2023-05-07 12:16:14', '2023-05-07 12:16:14', NULL),
+(9, 'http://erp.test/uploads/website/gallery/1765237626670476.jpg', 5, 1, '2023-05-07 12:16:27', '2023-05-07 12:16:27', NULL),
+(10, 'http://erp.test/uploads/website/gallery/1765237641504781.jpg', 6, 1, '2023-05-07 12:16:41', '2023-05-07 12:16:41', NULL),
+(11, 'http://erp.test/uploads/website/gallery/1765237658340911.jpg', 6, 1, '2023-05-07 12:16:57', '2023-05-07 12:16:57', NULL),
+(12, 'http://erp.test/uploads/website/gallery/1765237675347731.jpg', 6, 1, '2023-05-07 12:17:13', '2023-05-07 12:17:13', NULL),
+(13, 'http://erp.test/uploads/website/gallery/1765237726231837.jpg', 6, 1, '2023-05-07 12:18:01', '2023-05-07 12:18:01', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gallery_categories`
+--
+
+CREATE TABLE `gallery_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `icon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `gallery_categories`
+--
+
+INSERT INTO `gallery_categories` (`id`, `name`, `slug`, `icon`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Machine Books', 'machine-books', 'uploads/website/gallery/1764769731526291.png', 1, '2023-05-02 08:19:27', '2023-05-07 11:54:59', '2023-05-07 11:54:59'),
+(2, 'Classifieds', 'classifieds', 'uploads/website/gallery/1764770183119102.webp', 1, '2023-05-02 08:21:34', '2023-05-02 08:27:57', '2023-05-02 08:27:57'),
+(3, 'Hayley Bry', 'hayley-bry', 'uploads/website/gallery/1764770283156008.jpg', 1, '2023-05-02 08:28:13', '2023-05-07 11:55:03', '2023-05-07 11:55:03'),
+(4, 'New Classified Product', 'new-classified-product', 'uploads/website/gallery/1764770408889655.webp', 0, '2023-05-02 08:29:12', '2023-05-07 11:55:07', '2023-05-07 11:55:07'),
+(5, 'Factory', 'factory', NULL, 1, '2023-05-07 11:55:44', '2023-05-07 11:55:44', NULL),
+(6, 'Steel Production', 'steel-production', NULL, 1, '2023-05-07 11:55:56', '2023-05-07 11:55:56', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `general_settings`
+--
+
+CREATE TABLE `general_settings` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `site_name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `app_url` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `backend_logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `frontend_header_logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `favicon` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `frontend_footer_logo` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address1` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address2` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `phone` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fax` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `map` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `office_time` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `office_days` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `call_hour` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `get_in_touch` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `general_settings`
+--
+
+INSERT INTO `general_settings` (`id`, `site_name`, `app_url`, `description`, `backend_logo`, `frontend_header_logo`, `favicon`, `frontend_footer_logo`, `address1`, `address2`, `phone`, `email`, `fax`, `website`, `map`, `office_time`, `office_days`, `call_hour`, `get_in_touch`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Asbrm', 'http://asbrm.test', 'ASBRM, part of Majumdar Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron & Steel in country under the brand name \"ASBRM\" with a product range of 8mm to 40mm TMT 500W Bar, 10mm to 40mm 400/300 Grade Bar.', 'http://erp.test/uploads/website/setting/1764959732777183.jpg', 'http://erp.test/uploads/website/setting/1764959732786760.jpg', 'http://erp.test/uploads/website/setting/1764959757391439.png', 'http://erp.test/uploads/website/setting/1764959732792321.jpg', 'House # 12 ( 2nd Floor ) Road No: 2/3 Banani, Dhaka-1213', 'Barpa , Tarabo , Rupgonj, Narayangonj, Bangladesh', '+880 185-428 471', 'info@asbrm.net', '65745675654', 'http://asbrm.test', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.0518438822787!2d90.53548091498126!3d23.745530584591872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b5eed8b21c4b%3A0x75174d7a51f3f8c4!2sASBRM%20Steel%20(BD)%2C%20Limited!5e0!3m2!1sen!2sus!4v1624083766861!5m2!1sen!2sus', '10.00', 'Friday', '10', 'ASBRM, part of Majumdar Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron & Steel in country under the brand name \"ASBRM\" with a product range of 8mm to 40mm TMT 500W Bar, 10mm to 40mm 400/300 Grade Bar.', '2023-05-03 06:37:26', '2023-05-07 12:38:29', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `histories`
+--
+
+CREATE TABLE `histories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `histories`
+--
+
+INSERT INTO `histories` (`id`, `description`, `image`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.', 'http://erp.test/uploads/website/pages/1764964880762601.jpg', '2023-05-03 05:27:47', '2023-05-04 12:01:16', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs`
+--
+
+CREATE TABLE `jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `job_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `job_category_id` int(11) NOT NULL,
+  `vacancy` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `responsibility` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `facilities` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `education_req` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `skill` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `experience` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `salary` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `salary_type` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `location` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deadline` date DEFAULT NULL,
+  `city` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `jobs`
+--
+
+INSERT INTO `jobs` (`id`, `job_title`, `job_type`, `job_category_id`, `vacancy`, `designation`, `responsibility`, `facilities`, `description`, `education_req`, `skill`, `experience`, `salary`, `salary_type`, `location`, `email`, `website`, `deadline`, `city`, `image`, `slug`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, '.NEt Dfeveloper', 'fulltime', 2, '20', NULL, 'dfrgdrxg, dfdf, dfdfff, dfdfdf,.  dfdfdf, swsree,', 'drdxr', 'learning mood', 'BS.c Enginner', '.ET, HTML , CSS, PHP, JAVA', '4 Years', '12000', 'negotible', 'Dhakak', 'admin@gmail.com', 'https://www.fecab.com.au', '2023-06-15', 'Voluptate enim fugit', 'uploads/website/jobs/1764762589372081.webp', 'net-dfeveloper', '2023-05-02 06:25:56', '2023-06-01 04:23:48', NULL),
+(2, 'Sr. Developer', 'parttime', 2, '20', NULL, 'fthdrt', 'dfthd', 'BS.c Enginner', 'BS.c Enginner', 'fdthf', '4 years', '25000', 'fixes', 'Dhaka', 'admin@example.com', 'https://www.fecab.com.au', '2023-06-08', 'Omar Sweet', 'uploads/website/jobs/1764762709375944.png', 'sr-developer', '2023-05-02 06:27:50', '2023-05-06 06:11:47', NULL),
+(3, 'Sr. Developer', 'projectbase', 2, '20', NULL, 'fdxhdxh dhg dhdt', 'hdfhdf', 'nftgtgnh', NULL, 'ft', 'tf', '25000', 'fixes', 'Dhaka', 'excelestore@gmail.com', 'www.brickland.com', '2023-05-30', 'Omar Sweet', 'uploads/website/jobs/1764762903235461.webp', 'sr-developer', '2023-05-02 06:30:55', '2023-05-02 06:49:53', '2023-05-02 06:49:53'),
+(4, 'Jr. Developer', 'projectbase', 2, '10', NULL, 'xdfh dghdrth rth rth', 'ghdrgdrgft htrfh rdtf h', 'Larninbg mood', 'BS.c Enginner', 'dddddddddd dr', 'Expireces mood', '20000', 'fixes', 'Dhaka', 'hasantariq71@yahoo.com', 'https://www.fecab.com.au', '2023-05-30', 'Omar', 'uploads/website/jobs/1764763915423292.jpg', 'jr-developer', '2023-05-02 06:35:35', '2023-05-06 06:12:23', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job_applies`
+--
+
+CREATE TABLE `job_applies` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `job_id` int(11) NOT NULL,
+  `first_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `last_name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mobile` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `resume` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `cover_letter` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `website_url` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin_url` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `skill` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sourch` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `location` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `education` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `experience` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `country` int(11) DEFAULT NULL,
+  `city` int(11) DEFAULT NULL,
+  `photo` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `job_applies`
+--
+
+INSERT INTO `job_applies` (`id`, `job_id`, `first_name`, `last_name`, `mobile`, `email`, `resume`, `cover_letter`, `website_url`, `linkedin_url`, `skill`, `sourch`, `location`, `education`, `experience`, `country`, `city`, `photo`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(6, 1, 'Arif vai', 'Hossain', '0165243455', 'arif@gmail.com', '/uploads/asbrm/job/1767482745116880.pdf', '/uploads/asbrm/job/1767482745210107.pdf', 'http://erp-website.test/career.net', 'https://www.google.com', 'sfkjd;klfj', 'Internal', 'Jjlkdlf', '[{\"institute\":\"BRB UNIVERSITY\",\"department\":\"CSE\",\"degree\":\"MASTERS\",\"edu_start_month\":\"September\",\"edu_start_year\":\"2014\",\"edu_end_month\":\"September\",\"edu_end_year\":\"2016\"}]', '[{\"designation\":\"Developer\",\"company\":\"Pondit\",\"summary\":\"Lorem Ipsum\",\"exp_start_month\":\"November\",\"exp_start_year\":\"2009\",\"exp_end_month\":\"October\",\"exp_end_year\":\"2010\"}]', 4, 0, '/uploads/asbrm/job/Arif vai-1767482745211437.jpg', 1, '2023-06-17 07:01:38', '2023-06-17 12:02:50', NULL),
+(7, 1, 'Sharif', 'Islam', '0194556666', 'shaif@gmail.com', '/uploads/asbrm/job/1767483933186032.pdf', '/uploads/asbrm/job/1767483933190090.pdf', 'http://erp-website.test/career.net', 'https://www.google.com', 'HTML, CSS, JAVASCRIPT, PHP .NET', 'Advertisement', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio odio, ultricies sed maximus in, pretium id metus. Aenean purus arcu, tincidunt vitae tellus id, pulvinar euismod metus. Pellentesque quis laoreet diam, ut dictum nunc. Integer vel placerat orci. Ut sagittis metus sed libero pretium,', '[{\"institute\":\"BRACK UNIVERSITY\",\"department\":\"CSE\",\"degree\":\"HONOURS\",\"edu_start_month\":\"January\",\"edu_start_year\":\"2015\",\"edu_end_month\":\"January\",\"edu_end_year\":\"2019\"},{\"institute\":\"BRB UNIVERSITY\",\"department\":\"MSC\",\"degree\":\"MASTERS\",\"edu_start_month\":\"July\",\"edu_start_year\":\"2019\",\"edu_end_month\":\"August\",\"edu_end_year\":\"2021\"}]', '[{\"designation\":\"Developer\",\"company\":\"Pondit\",\"summary\":\"Lorem Ipsum\",\"exp_start_month\":\"November\",\"exp_start_year\":\"2020\",\"exp_end_month\":\"September\",\"exp_end_year\":\"2021\"},{\"designation\":\"Developer\",\"company\":\"SppedDIGIT\",\"summary\":\"Lorem Ipsum\",\"exp_start_month\":\"October\",\"exp_start_year\":\"2021\",\"exp_end_month\":\"March\",\"exp_end_year\":\"2023\"}]', 0, 0, '/uploads/asbrm/job/Sharif-1767483933191365.jpg', 1, '2023-06-17 07:20:31', '2023-06-17 09:58:49', NULL),
+(8, 2, 'sdsdd', 'fgfdg', '+13383686016', 'vanusav@mailinator.com', '/uploads/asbrm/job/1767862955788697.pdf', '/uploads/asbrm/job/1767862955792988.pdf', 'https://nwidart.com/', 'https://nwidart.com/', 'HTML, CSS, JS, PHP', 'Advertisement', 'Dhaka Uttara', '[{\"institute\":\"Unde nesciunt aut l\",\"department\":\"Est in sunt dolorem\",\"degree\":\"cse\",\"edu_start_month\":\"February\",\"edu_start_year\":\"2022\",\"edu_end_month\":\"February\",\"edu_end_year\":\"2023\"}]', '[{\"designation\":\"Developer\",\"company\":\"Voluptate expedita i\",\"summary\":\"Summary\",\"exp_start_month\":\"June\",\"exp_start_year\":\"2010\",\"exp_end_month\":\"October\",\"exp_end_year\":\"2020\"}]', 0, 0, '/uploads/asbrm/job/sdsdd-1767862955794207.jpg', 1, '2023-06-17 11:44:55', '2023-06-17 12:02:50', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job_categories`
+--
+
+CREATE TABLE `job_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `job_categories`
+--
+
+INSERT INTO `job_categories` (`id`, `name`, `slug`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Accounting', 'accounting', 1, '2023-05-02 06:26:32', '2023-05-02 06:26:32', NULL),
+(2, 'Engineer', 'engineer', 1, '2023-05-02 06:26:45', '2023-05-02 06:26:45', NULL),
+(3, 'Customer Support/Call Centre', 'customer-supportcall-centre', 1, '2023-05-02 06:26:57', '2023-05-02 06:26:57', NULL),
+(4, 'Machine Books', 'machine-books', 1, '2023-05-02 08:15:48', '2023-05-02 08:15:48', NULL),
+(5, 'Samsung', 'samsung', 1, '2023-05-02 10:18:13', '2023-05-02 10:18:13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pages`
+--
+
+CREATE TABLE `pages` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `position` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `title`, `slug`, `description`, `position`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Return Policy', 'return-policy', 'Return Policy', 'footer', 1, '2023-05-07 09:09:59', '2023-05-07 09:12:37', NULL),
+(2, 'Term Policy', 'term-policys', 'Welcome to Website Name!\r\n\r\nThese terms and conditions outline the rules and regulations for the use of Company Name\'s Website, located at Website.com.\r\n\r\nBy accessing this website we assume you accept these terms and conditions. Do not continue to use Website Name if you do not agree to take all of the terms and conditions stated on this page.\r\n\r\nThe following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: “Client, You and Your refers to you, the person log on this website and compliant to the Company\'s terms and conditions. The Company”, Ourselves, We, “Our and Us, refers to our Company. Party”, “Parties”, or “Us, refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client\'s needs in respect of provision of the Company\'s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.', 'footer', 1, '2023-05-07 09:13:33', '2023-05-07 09:32:31', NULL),
+(3, 'Header manu', 'fghfdh', 'cbxdfgbhdf', 'top_header', 1, '2023-05-07 09:14:49', '2023-05-07 09:18:25', '2023-05-07 09:18:25'),
+(4, 'fghfgh ok', 'fghfg', 'fghfghko', 'menu_header', 1, '2023-05-07 09:16:12', '2023-05-07 09:18:18', '2023-05-07 09:18:18'),
+(5, 'Policy', 'policy', 'Policy', 'menu_header', 1, '2023-05-07 09:16:32', '2023-05-07 09:16:32', NULL),
+(6, 'Privacy Policy Page', 'privacy-policy-page', 'Our Privacy Policy was last updated on [DATE].\r\n\r\n\r\n\r\nThis Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.\r\n\r\n\r\n\r\nWe use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy was generated by TermsFeed Ecommerce Privacy Policy Generator.\r\n\r\nInterpretation and Definitions\r\nInterpretation\r\n\r\n\r\nThe words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.', 'footer', 1, '2023-05-07 09:17:39', '2023-05-07 09:17:39', NULL),
+(7, 'Seller Policy Pages', 'seller-policy-pages', 'Sample Support Policy Template\r\n\r\n\r\n\r\nSupport Policy\r\n\r\n\r\n\r\nOur Return and Refund Policy was last updated [DATE]\r\n\r\n\r\n\r\nThank you for shopping at [WEBSITE_NAME].\r\n\r\n\r\n\r\nIf, for any reason, You are not completely satisfied with a purchase We invite You to review our policy on refunds and returns. This Return and Refund Policy was generated by TermsFeed Return and Refund Policy Generator.\r\n\r\n\r\n\r\nThe following terms are applicable for any products that You purchased with Us.\r\n\r\nInterpretation and Definitions\r\n\r\nInterpretation\r\n\r\n\r\n\r\nThe words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.\r\n\r\nDefinitions', 'menu_header', 1, '2023-05-07 09:17:58', '2023-05-07 09:17:58', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `partners`
+--
+
+CREATE TABLE `partners` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `image` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `category_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `slug` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `thumbnail` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `title`, `category_id`, `slug`, `description`, `thumbnail`, `image`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Music T-Shart', 2, 'music-t-shart', 'method inserts specified content at the end', 'http://erp.test/uploads/website/product/1764963696450260.webp', '[\"uploads\\/website\\/product\\/1764332483496716.jpg\",\"uploads\\/website\\/product\\/1764332483547745.jpg\"]', 1, '2023-04-27 11:11:32', '2023-05-04 11:42:26', NULL),
+(2, 'Kabir Singh Metal Sun Glass for Men', 2, 'kabir-singh-metal-sun-glass-for-men', 'Kabir Singh Metal Sun Glass for Men', 'http://erp.test/uploads/website/product/1764963730768493.webp', '[\"http:\\/\\/erp.test\\/uploads\\/website\\/product\\/1764963730856721.webp\"]', 0, '2023-04-27 11:12:15', '2023-05-04 11:42:59', NULL),
+(3, 'Kabir Singh Metal Sun Glass for Men', 2, 'kabir-singh-metal-sun-glass-for-men', 'Kabir Singh Metal Sun Glass for Men', 'http://erp.test/uploads/website/product/1764963754930717.webp', '[\"http:\\/\\/erp.test\\/uploads\\/website\\/product\\/1764963755021092.webp\",\"http:\\/\\/erp.test\\/uploads\\/website\\/product\\/1764963755092607.webp\"]', 0, '2023-04-27 11:13:15', '2023-05-04 11:43:22', NULL),
+(4, 'magnet cable x cable Led Magnetic Charging USB Cable 2A Charging Cable', 2, 'magnet-cable-x-cable-led-magnetic-charging-usb-cable-2a-charging-cable', 'magnet cable x cable Led Magnetic Charging USB Cable 2A Charging Cable', 'uploads/website/product/1764330431332981.png', '[\"uploads\\/website\\/product\\/1764330431820820.webp\",\"uploads\\/website\\/product\\/1764330432021833.webp\"]', 1, '2023-04-27 11:56:58', '2023-04-27 12:30:40', '2023-04-27 12:30:40');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `product_categories`
+--
+
+CREATE TABLE `product_categories` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `product_categories`
+--
+
+INSERT INTO `product_categories` (`id`, `name`, `slug`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, '40-grade-300-w-tmt-bar', '40-grade-300-w-tmt-bar', 1, '2023-04-27 09:44:21', '2023-05-04 11:45:24', NULL),
+(2, '40-grade-400-w-tmt-bar', '40-grade-400-w-tmt-bar', 1, '2023-04-27 09:53:46', '2023-05-04 11:45:36', NULL),
+(3, 'Machine Book', 'machine-book', 1, '2023-04-27 09:54:39', '2023-04-27 09:57:35', '2023-04-27 09:57:35'),
+(4, 'New Classified Product', 'new-classified-product', 1, '2023-05-07 11:28:32', '2023-05-07 11:28:32', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `replies`
+--
+
+CREATE TABLE `replies` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `blog_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `comment_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `comment` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reports`
+--
+
+CREATE TABLE `reports` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `reports`
+--
+
+INSERT INTO `reports` (`id`, `title`, `image`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'dzfgszdgsd', 'uploads/website/report/1764875078767166.webp', 1, NULL, '2023-05-03 12:16:11', '2023-05-03 12:16:11'),
+(2, 'Report 02', 'http://erp.test/uploads/website/report/1765133478493136.webp', 1, NULL, '2023-05-06 08:41:03', NULL),
+(3, 'ytjdrthrtghthgjfgcj', 'uploads/website/report/1764874249797149.jpg', 0, '2023-05-03 12:00:43', '2023-05-03 12:16:17', '2023-05-03 12:16:17'),
+(4, 'Report 03', 'http://erp.test/uploads/website/report/1765133512934018.webp', 1, '2023-05-03 12:16:00', '2023-05-06 08:41:36', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `seo_settings`
+--
+
+CREATE TABLE `seo_settings` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `meta_title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_tag` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_description` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `meta_author` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `google_analytics` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `google_verification` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `bing_verification` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `alexa_analytics` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `seo_settings`
+--
+
+INSERT INTO `seo_settings` (`id`, `meta_title`, `meta_tag`, `meta_description`, `meta_author`, `google_analytics`, `google_verification`, `bing_verification`, `alexa_analytics`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Asbrm Ltd.', 'Meta Tag', 'Meta Description', 'Author', 'google verification', 'fthtr', 'rthtdrh', 'rtdh', '2023-05-03 07:15:34', '2023-05-03 07:15:34', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sliders`
+--
+
+CREATE TABLE `sliders` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `sliders`
+--
+
+INSERT INTO `sliders` (`id`, `title`, `slug`, `image`, `description`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'zdrgr', 'zdrgr', 'uploads/website/slider/1764877612374350.webp', NULL, 1, '2023-05-03 12:54:10', '2023-05-03 12:58:42', '2023-05-03 12:58:42'),
+(2, 'ASBRM - ভবন নির্মাণে স্থায়ীত্ব ও নিরাপত্তার নিশ্চয়তা', 'asbrm-vbn-nirmane-sthayeetw-oo-nirapttar-niscyta', 'http://erp.test/uploads/website/slider/1765210769877070.jpg', 'ASBRM, part of Majumder Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron & Steel in country under the brand name ASBRM', 1, '2023-05-03 12:57:09', '2023-05-07 05:09:55', NULL),
+(3, 'teast', 'teast', 'uploads/website/slider/1764877910955885.webp', NULL, 0, '2023-05-03 12:58:55', '2023-05-03 12:59:18', '2023-05-03 12:59:18'),
+(4, 'ASBRM ভবন নির্মাণে স্থায়ীত্ব ও নিরাপত্তার নিশ্চয়তা', 'asbrm-vbn-nirmane-sthayeetw-oo-nirapttar-niscyta', 'http://erp.test/uploads/website/slider/1765138132122418.jpg', 'ASBRM, part of Majumder Group, is one of the Modern Steel Rolling Mills with Steel Melting Shop in Dhaka. It is one of the premier manufacturers of Iron & Steel in country under the brand name \"ASBRM\"', 1, '2023-05-04 04:42:22', '2023-05-07 04:29:47', NULL),
+(5, 'drghrd', 'drghrd', 'http://erp.test/uploads/website/slider/1765209243468765.png', 'gzsdrg', 1, '2023-05-07 04:45:19', '2023-05-07 05:10:09', '2023-05-07 05:10:09');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_links`
+--
+
+CREATE TABLE `social_links` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `facebook` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `twitter` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `linkedin` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `pinterest` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `instagram` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `youtube` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `social_links`
+--
+
+INSERT INTO `social_links` (`id`, `facebook`, `twitter`, `linkedin`, `pinterest`, `instagram`, `youtube`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'facebook link', 'http://asbrm.net/twitter', 'http://asbrm.net/linkedin', 'http://asbrm.net/pinterest', 'http://asbrm.net/instagram', 'http://asbrm.net/youtube', '2023-05-03 07:33:36', '2023-05-03 07:34:36', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `teams`
+--
+
+CREATE TABLE `teams` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `phone` varchar(20) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `slug` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`id`, `name`, `email`, `phone`, `slug`, `designation`, `image`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Al Hassan', 'alhassan.cse@gmail.com', '+1 (273) 194-1978', 'al-hassan', 'Developer', 'http://erp.test/uploads/website/teams/1764960849195510.webp', 1, '2023-05-04 09:55:01', '2023-05-04 10:57:11', NULL),
+(2, 'Hassan', 'admin@example.com', '+1 (834) 808-8238', 'hassan', 'Developer', 'http://erp.test/uploads/website/teams/1764965083826157.webp', 1, '2023-05-04 12:04:29', '2023-05-04 12:05:58', NULL),
+(3, 'Machine', 'admin@example.com', '+1 (273) 194-1978', 'machine', 'Developer', 'http://erp.test/uploads/website/teams/1765238053361876.png', 1, '2023-05-04 12:05:06', '2023-05-07 12:23:13', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `designation` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `rating` int(11) DEFAULT NULL,
+  `image` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(1) DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `title`, `name`, `designation`, `description`, `rating`, `image`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'dfgdrfgh', 'drgdrgf', 'drgrg', 'drgrg', 5, NULL, 0, NULL, '2023-05-04 10:26:54', '2023-05-04 10:26:54'),
+(2, 'Restimonial 01', 'Al Hassan', 'Developer', 'Condimentum maximus pharetra maecenas rutrum proin at augue. Taciti ac tempus amet pharetra nulla. Orci cursus eget vivamus. Integer morbi convallis aptent malesuada. Imperdiet id habitasse nunc. Donec viverra facilisis primis scelerisque. Rhoncus letius nullam condimentum.', NULL, 'http://erp.test/uploads/website/testimonial/1764959034974717.webp', 1, '2023-05-03 07:59:49', '2023-05-04 10:28:21', NULL),
+(3, 'Testimonial 02', 'Al Hassan', 'Developer', 'Condimentum maximus pharetra maecenas rutrum proin at augue. Taciti ac tempus amet pharetra nulla. Orci cursus eget vivamus. Integer morbi convallis aptent malesuada. Imperdiet id habitasse nunc. Donec viverra facilisis primis scelerisque. Rhoncus letius nullam condimentum.', NULL, 'http://erp.test/uploads/website/testimonial/1764959088004986.webp', 1, '2023-05-03 08:01:55', '2023-05-04 10:29:11', NULL),
+(4, 'Testimonial 03', 'Machine Books', 'Developer', 'Condimentum maximus pharetra maecenas rutrum proin at augue. Taciti ac tempus amet pharetra nulla. Orci cursus eget vivamus. Integer morbi convallis aptent malesuada. Imperdiet id habitasse nunc. Donec viverra facilisis primis scelerisque. Rhoncus letius nullam condimentum.', NULL, 'http://erp.test/uploads/website/testimonial/1764959070535909.webp', 1, '2023-05-03 08:02:27', '2023-05-04 10:30:53', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `videos`
+--
+
+CREATE TABLE `videos` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `thumbnail` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `videos`
+--
+
+INSERT INTO `videos` (`id`, `title`, `slug`, `link`, `description`, `thumbnail`, `status`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Music One', 'video-01', 'https://www.youtube.com/embed/_josCDB7e9k', 'dthrtd hrdth', 'http://erp.test/uploads/website/video/1764966281516156.jpg', 1, '2023-05-04 05:09:22', '2023-05-04 12:23:32', NULL),
+(2, 'Music Two', 'video-02', 'https://www.youtube.com/embed/_josCDB7e9k', 'video details', 'http://erp.test/uploads/website/video/1764966296216846.jpg', 1, '2023-05-04 05:22:46', '2023-05-04 12:23:46', NULL),
+(3, 'thxdfth', 'thxdfth', 'https://www.wordstream.com/blog/ws/2017/07/19/customer-testimonial-examples', 'dxfhbdxfh', 'uploads/website/video/1764940123289682.jpg', 1, '2023-05-04 05:27:45', '2023-05-04 05:27:55', '2023-05-04 05:27:55');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `about_us`
+--
+ALTER TABLE `about_us`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `awards`
+--
+ALTER TABLE `awards`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `banners`
+--
+ALTER TABLE `banners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `blogs`
+--
+ALTER TABLE `blogs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `blog_categories_id_foreign` (`blog_categories_id`);
+
+--
+-- Indexes for table `blog_categories`
+--
+ALTER TABLE `blog_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `buyer_requisitions`
+--
+ALTER TABLE `buyer_requisitions`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `campaigns`
+--
+ALTER TABLE `campaigns`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `cities`
+--
+ALTER TABLE `cities`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `country_id_foreign` (`country_id`);
+
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `comments`
+--
+ALTER TABLE `comments`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `countries`
+--
+ALTER TABLE `countries`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `dealer_requests`
+--
+ALTER TABLE `dealer_requests`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `director_messages`
+--
+ALTER TABLE `director_messages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `districts`
+--
+ALTER TABLE `districts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `faqs`
+--
+ALTER TABLE `faqs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `gallery_categories_id_foreign` (`gallery_category_id`);
+
+--
+-- Indexes for table `gallery_categories`
+--
+ALTER TABLE `gallery_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `general_settings`
+--
+ALTER TABLE `general_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `histories`
+--
+ALTER TABLE `histories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `jobs`
+--
+ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `job_applies`
+--
+ALTER TABLE `job_applies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `job_categories`
+--
+ALTER TABLE `job_categories`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `job_categories_name_unique` (`name`),
+  ADD UNIQUE KEY `job_categories_slug_unique` (`slug`);
+
+--
+-- Indexes for table `pages`
+--
+ALTER TABLE `pages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `partners`
+--
+ALTER TABLE `partners`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `products_category_id_foreign` (`category_id`);
+
+--
+-- Indexes for table `product_categories`
+--
+ALTER TABLE `product_categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `replies`
+--
+ALTER TABLE `replies`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `comments_blog_id_foreign` (`blog_id`),
+  ADD KEY `comments_user_id_foreign` (`user_id`),
+  ADD KEY `comments_comment_id_foreign` (`comment_id`);
+
+--
+-- Indexes for table `reports`
+--
+ALTER TABLE `reports`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `seo_settings`
+--
+ALTER TABLE `seo_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sliders`
+--
+ALTER TABLE `sliders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `social_links`
+--
+ALTER TABLE `social_links`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `teams`
+--
+ALTER TABLE `teams`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `videos`
+--
+ALTER TABLE `videos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `about_us`
+--
+ALTER TABLE `about_us`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `awards`
+--
+ALTER TABLE `awards`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `banners`
+--
+ALTER TABLE `banners`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `blogs`
+--
+ALTER TABLE `blogs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `blog_categories`
+--
+ALTER TABLE `blog_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `buyer_requisitions`
+--
+ALTER TABLE `buyer_requisitions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `campaigns`
+--
+ALTER TABLE `campaigns`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `cities`
+--
+ALTER TABLE `cities`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT for table `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `countries`
+--
+ALTER TABLE `countries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `dealer_requests`
+--
+ALTER TABLE `dealer_requests`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `director_messages`
+--
+ALTER TABLE `director_messages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `districts`
+--
+ALTER TABLE `districts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `faqs`
+--
+ALTER TABLE `faqs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `gallery_categories`
+--
+ALTER TABLE `gallery_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `general_settings`
+--
+ALTER TABLE `general_settings`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `histories`
+--
+ALTER TABLE `histories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `jobs`
+--
+ALTER TABLE `jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `job_applies`
+--
+ALTER TABLE `job_applies`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `job_categories`
+--
+ALTER TABLE `job_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `pages`
+--
+ALTER TABLE `pages`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `partners`
+--
+ALTER TABLE `partners`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `product_categories`
+--
+ALTER TABLE `product_categories`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `replies`
+--
+ALTER TABLE `replies`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `reports`
+--
+ALTER TABLE `reports`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `seo_settings`
+--
+ALTER TABLE `seo_settings`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `sliders`
+--
+ALTER TABLE `sliders`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `social_links`
+--
+ALTER TABLE `social_links`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `teams`
+--
+ALTER TABLE `teams`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `videos`
+--
+ALTER TABLE `videos`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

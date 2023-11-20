@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+* {
+    padding: 0%;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+   background-color: var(--white-color);
+}
+
+img.logo {
+    width: 40px;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+}
+
+.card-body {
+    max-width: 255px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.main-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img.userImg {
+    width: 111px;
+}
+
+.userImgMain {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.userInfo {
+    font-size: 13px;
+    padding: 0 8px;
+}
+
+td {
+    padding-right: 9px;
+}
+
+.card-head h2 {
+    font-size: 24px;
+    color: #484848;
+}
+
+.cmName p {
+    font-size: 11px;
+    background: #ff9a42;
+    padding: 0 2px;
+    font-weight: 600;
+}
+
+.cmName {
+    line-height: 20px;
+    padding-top: 5px;
+    padding-left: 11px;
+}
+
+.logo h2 {
+    color: #a62ce4;
+    font-size: 30px;
+}
+
+tr td:first-child {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.signature {
+    display: flex;
+    padding-top: 27px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 11px;
+}
+
+.holder {
+    border-top: 2px solid #797979;
+}
+
+.author {
+    border-top: 2px solid #797979;
+}
+
+.cmName h2 {
+    font-family: fantasy;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+/* ========================================Back side============================== */
+
+.id-bg {
+    text-align: center;
+}
+
+p.request {
+    font-family: cursive;
+}
+
+h2.cm-name {
+    font-family: fantasy;
+    font-weight: 500;
+}
+
+h4.groupName {
+    font-family: auto;
+    font-size: 20px;
+}
+
+.detels {
+    font-size: 13px;
+    padding: 6.2px 0;
+}
+
+p.sec-title {
+    font-weight: 700;
+}

@@ -1,0 +1,25 @@
+:: ATTENDANCE IMPORT GUIDE ::
+----------------------------------------
+
+
+- Separate each attendance record by one or more spaces
+- Define employee-id <space> month/date/year <space> and time, in a single line of text.
+- Time is 24 Hour Format Separated by colon ':'
+- Avoid any alphabetic characters (a-z and A-Z) in your file 
+- Setup your export option to include only data. No header or footer required. 
+
+
+EmployeeID          MM/DD/YYYY      HH:MM       
+================================================
+50000005	        04/05/2022 	    5:29
+50000005	        04/05/2022 	    5:30
+50000005	        04/05/2022 	    5:31
+50000005	        04/05/2022 	    7:25
+50000005	        04/05/2022 	    18:20
+50000005	        04/05/2022 	    19:20
+50000005	        04/06/2022 	    6:20
+50000005	        04/06/2022 	    16:25
+50000005	        04/07/2022 	    6:20
+50000005	        04/07/2022 	    17:25
+50000005	        04/08/2022 	    8:00
+50000005	        04/08/2022 	    20:30

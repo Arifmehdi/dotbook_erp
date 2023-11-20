@@ -1,0 +1,181 @@
+<?php
+
+use App\Models\Sale;
+use App\Models\Account;
+use App\Models\Asset\Asset;
+use App\Models\JournalEntry;
+use App\Mail\WelcomeUserMail;
+use App\Models\AccountLedger;
+use App\Models\CustomerLedger;
+use App\Models\Asset\Allocation;
+use App\Models\ExpenseDescription;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Route;
+use Yajra\DataTables\Facades\DataTables;
+use Yajra\DataTables\Services\DataTable;
+use App\Interface\CodeGenerationServiceInterface;
+use App\Http\Controllers\Debug\PermissionCreatorController;
+
+
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Modules\HRM\Http\Requests\Employee\CreateEmployeeRequest;
+
+Route::get('test-mail', function () {
+    $data['name'] = 'Mr. Random';
+    \Mail::to('random@gmail.com')->send(new WelcomeUserMail($data));
+    return 'Sent at '  . now();
+});
+
+Route::prefix('debug')->as('debug.')->group(function () {
+    Route::resource('permission_gui', PermissionCreatorController::class);
+});
+
+Route::get('route-list', function () {
+    Artisan::call('route:list --columns=Method,URI,Name,Action');
+    return '<pre>' . Artisan::output() . '</pre>';
+});
+
+Route::get('generate', function (CodeGenerationServiceInterface $codeGenerationService) {
+
+    $assetAllocation = new Allocation();
+    $assetAllocation->code = $codeGenerationService->generate('asset_allocations', 'code');
+
+    dd($assetAllocation->code);
+    dd($codeGenerationService->generate('asset_allocations', 'code', 'AL', 6));
+    dd($codeGenerationService->generate('asset_revokes', 'revoke_code', 'AR'));
+});
+
+Route::get('print', function () {
+
+    $users = [
+        ['id' => 1, 'name' => 'SpeedDigit 1'],
+        ['id' => 2, 'name' => 'User 2'],
+        ['id' => 3, 'name' => 'User 3'],
+        ['id' => 4, 'name' => 'User 4'],
+    ];
+
+    $pdf = PDF::loadView('dev_routes.print', compact('users'));
+    $pdf->stream('filename.pdf');
+});
+
+Route::get('test', function () {
+
+    // $message = 'Welcome to ERP!';
+
+    // $apiKey = \config('sms.apiKey');
+    // $secretKey = \config('sms.secretKey');
+    // $callerId = \config('sms.callerId');
+
+    // $toUser = trim('8801919585035');
+
+    // $url = "http://188.138.41.146:7788/sendtext?apikey={$apiKey}&secretkey={$secretKey}&callerID={$callerId}&toUser={$toUser}&messageContent={$message}";
+    // $url = str_replace(' ', '%20', $url);
+
+    // $response = Http::get($url);
+    // \Log::debug($response);
+
+    // return $users = DB::table('customer_ledgers')
+    //     ->leftJoin('customers', 'customer_ledgers.customer_id', 'customers.id')
+    //     ->leftJoin('users', 'customer_ledgers.user_id', 'users.id')
+    //     ->select(
+    //         'customers.name as cus_name',
+    //         'customers.phone as cus_phone',
+    //         'users.prefix as u_prefix',
+    //         'users.name as u_name',
+    //         'users.last_name as u_last_name',
+    //         'users.phone as u_phone',
+    //         DB::raw('SUM(customer_ledgers.debit) as total_debit'),
+    //         DB::raw('SUM(customer_ledgers.credit) as total_credit'),
+    //     )->orderBy('customer_ledgers.customer_id')
+    //     ->groupBy('customer_ledgers.customer_id')
+    //     ->groupBy('customer_ledgers.user_id')
+    //     ->groupBy('customers.name')
+    //     ->groupBy('customers.phone')
+    //     ->groupBy('users.name')
+    //     ->groupBy('users.phone')
+    //     ->groupBy('users.last_name')
+    //     ->get();
+
+    // $array = array(1, 2, 3);
+    // $serializeArray = serialize($array);
+
+    // $unserializeArray = unserialize($serializeArray);
+
+    // return $unserializeArray[0];
+
+    // $accountTypes = App\Utils\Util::allAccountTypes();
+
+    // $arr = [1, 2, 3];
+
+    // $filteredArr = array_filter($accountTypes, fn($key) => in_array($key, $arr), ARRAY_FILTER_USE_KEY);
+
+    // return $filteredArr;
+
+    // return $productListWithStock = DB::select(
+    //     DB::raw(
+    //         "SELECT pro.id as product_id, IFNULL(pv.id, null) as product_variant_id,
+    //         Concat(pro.name, IFNULL(pv.variant_name, '')) as product_name,
+    //        (case when isnull(pv.id) then pro.product_code else pv.variant_code END) as product_code,
+    //         IFNULL(SUM(pQty),0) as pQty,IFNULL(SUM(sQty),0) as sQty,IFNULL(SUM(srQty),0) as srQty, ((IFNULL(SUM(pQty),0) + IFNULL(SUM(srQty),0))-IFNULL(SUM(sQty),0)) as Stock
+    //        FROM  (
+    //             -- RETRIEVE ALL STOCK IN AND STOCK OUT DATA AS CHILD
+    //             SELECT product_id,product_variant_id,quantity as pQty,0 as sQty,0 as srQty FROM purchase_products as pp
+    //             INNER JOIN purchases p on p.id=pp.purchase_id  -- in
+    //             union
+    //             SELECT product_id,product_variant_id,0 as pQty,quantity as sQty,0 as srQty FROM sale_products as sp
+    //             INNER JOIN sales as s on s.id=sp.sale_id  -- out
+    //             UNION
+    //             SELECT product_id,product_variant_id,0 as pQty,0 as sQty,return_qty as srQty FROM sale_return_products as srp
+    //             INNER JOIN sale_returns as sr on sr.id=srp.sale_return_id  -- in
+
+    //         ) as child
+    //            RIGHT join products as pro on pro.id=child.product_id
+    //            LEFT JOIN product_variants as pv on pv.product_id=pro.id
+    //            GROUP BY pro.id, pv.id, pro.name, pv.variant_name, pro.product_code, pv.variant_code"
+    //     )
+    // );
+
+    // where (null={$product_id} or pro.id={$product_id})
+
+    try {
+
+        DB::beginTransaction();
+        // database queries here. Access any $var_N directly
+
+        $salesLedgerEntries = CustomerLedger::where('sale_id', '!=', NULL)->get();
+
+        foreach ($salesLedgerEntries as $key => $salesLedgerEntry) {
+
+            $sale = Sale::with('do')->where('id', $salesLedgerEntry->sale_id)->first();
+
+            if ($sale->do) {
+
+                if ($sale->do->order_by_id) {
+
+                    $salesLedgerEntry->user_id = $sale->do->order_by_id;
+                    $salesLedgerEntry->save();
+                }
+            }
+        }
+
+        DB::commit();
+    } catch (Exception $e) {
+
+        DB::rollBack();
+    }
+});
+
+Route::get('directive', fn () => view('dev_routes.test'));
+
+Route::get('test100', function () {
+    Schema::create('aaa_table', function (Blueprint $table) {
+        $table->string('name');
+        $table->string('email')->nullable()->unique();
+        $table->date('dob')->nullable();
+        $table->string('blood', 10)->nullable();
+        $table->enum('gender', ['Male', 'Female', 'Other']);
+        $table->string('marital_status', 10)->nullable();
+        $table->string('country')->nullable();
+    });
+});

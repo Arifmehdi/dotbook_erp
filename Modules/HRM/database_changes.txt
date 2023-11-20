@@ -1,0 +1,300 @@
+Table: grades
+=======================
+Column name changes:
+grades -> name
+
+Columns added:
+is_active (boolean)
+created_by (integer)
+
+Columns deleted:
+created_at (datetime)
+
+Columns updated:
+created_at(string) -> created_at(datetime)
+
+Foreign-key added:
+crated_by_id_foreign_key
+
+Foreign-key removed:
+updated_by_id_foreign_key
+
+Table: grades
+=======================
+Column name changes:
+grades -> name
+
+
+
+Table: leaveapplications -> renamed as leave_applications
+===============================
+Column removed:
+    apply_day
+    hard_copy
+    approve_day
+    approved_by
+    month
+    year
+    auth_name
+Column added:
+    attachment
+Column name changes:
+   approve_start_date -> from_date
+   approve_end_date -> to_date
+Column datatype changes:
+    $table->bigIncrements('id'); to $table->id();
+    $table->unsignedBigInteger('user_id')->index('leaveapplications_user_id_foreign'); to $table->foreignIdFor(Employee::class);
+    $table->unsignedBigInteger('type_id')->nullable()->index('leaveapplications_type_id_foreign'); to $table->foreignIdFor(LeaveApplicationType::class);
+    status datatype string -> change datatype boolean
+
+
+=================================
+
+Table: attendances -> attendances
+
+=== column change ===
+
+1. user_id -> employee_id
+2. shift_id === still
+3. clock_in === still
+4. clock_out === still
+5. is_manual === new added
+
+=== All Remove column ===
+
+5. add = status, deleted_at
+6. at_date
+7. at_date_ts
+8. clock_in_ts
+9. clock_out_ts
+10. month
+11. year
+12. bm_clock_in
+13. bm_clock_in_ts
+14. bm_clock_out
+15. bm_clock_out_ts
+17. holiday_id
+18. shift
+19. leave_type
+20. status
+================================================================
+                increment table change start
+================================================================
+       <<< Old Table start >>>
+$table->unsignedBigInteger('user_id')->index('increments_user_id_foreign');
+$table->string('increment_date')->nullable();
+$table->string('increment_month')->nullable();
+$table->string('increment_year')->nullable();
+$table->string('increment_type');
+$table->decimal('increment_amount', 22)->default(0);
+$table->string('increment_details')->nullable();
+$table->string('auth_name')->nullable();
+$table->decimal('previous', 22)->nullable()->default(0);
+$table->decimal('after_updated', 22)->nullable()->default(0);
+$table->timestamp('created_at')->nullable()->useCurrent();
+$table->timestamp('updated_at')->nullable();
+       <<< Old Table end >>>
+
+       <<< remove column start >>>
+'increment_date' =
+'increment_month'
+'increment_year'
+'increment_details'
+'auth_name'
+'created_at' = remove
+'updated_at' = remove
+       <<< remove column end >>>
+
+       <<< Current Table start >>>
+user_id = employee_id
+increment_type == still
+increment_amount == still
+previous == still
+after_updated == still
+increment_details == still
+       <<< Current Table end >>>
+
+       <<< column added >>>
+$table->tinyInteger('salary_type')->comment('1=Increment;2=Decrement');
+
+       <<< change datatype start >>>
+(increment_type) = string to tinyInteger
+(increment_details) = string to text
+       <<< change datatype end >>>
+================================================================
+                increment table change end
+================================================================
+
+
+================================================================
+                otherearns table change start--->
+================================================================
+       <<< Old Table start >>>
+            $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->string('permited_by', 191)->nullable();
+            $table->string('title')->nullable();
+            $table->string('month');
+            $table->string('date');
+            $table->string('year', 11)->nullable();
+            $table->string('amount')->nullable();
+            $table->string('deduction', 191)->nullable();
+            $table->integer('auth_id')->nullable();
+            $table->timestamps();
+
+       <<< Old Table end >>>
+
+            $table->foreignIdFor(Employee::class, 'employee_id')->constrained(config('database.connections.hrm.database') . '.employees')->onDelete('cascade');
+            $table->tinyInteger('type')->comment('1=Addition;2=Deduction');
+            $table->double('amount');
+            $table->tinyInteger('month');
+
+            $table->text('description')->nullable();
+
+        <<< Change column start >>>
+            bigIncrements => id,
+            user_id => employee_id,
+            title => description ,
+
+       <<< Change column end >>>
+
+       <<< remove column start >>>
+            'permited_by',
+            'date'
+            'auth_id'
+       <<< remove column end >>>
+
+       <<< Current Table status start >>>
+===========================================
+        ____old table____ = ____new table____
+
+               'id'       =      datatype (bigIncrements => id),
+            user_id'      =>     'employee_id',
+        'permited_by'    -=       X (remove),
+            'title'      +=      'description' datatype (string => text),
+            'month'       =       (still),
+            'date'        =       (still),
+            'year'        =       (still),
+            'amount'      =       (still),
+            'deduction'   =       X (remove),
+            'auth_id'     =       X (remove),
+
+        ____old table____ = ____new table____
+
+
+       <<< Current Table end >>>
+============================================
+
+       <<< change datatype start >>>
+            (increment_type) = string to tinyInteger
+            (increment_details) = string to text
+       <<< change datatype end >>>
+================================================================
+                <------otherearns table change end
+================================================================
+
+
+================================================================
+                otherearns table change start--->
+================================================================
+       <<< Old Table start >>>
+            $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->string('permited_by', 191)->nullable();
+            $table->string('title')->nullable();
+            $table->string('month');
+            $table->string('date');
+            $table->string('year', 11)->nullable();
+            $table->string('amount')->nullable();
+            $table->string('deduction', 191)->nullable();
+            $table->integer('auth_id')->nullable();
+            $table->timestamps();
+
+       <<< Old Table end >>>
+
+            $table->foreignIdFor(Employee::class, 'employee_id')->constrained(config('database.connections.hrm.database') . '.employees')->onDelete('cascade');
+            $table->tinyInteger('type')->comment('1=Addition;2=Deduction');
+            $table->double('amount');
+            $table->tinyInteger('month');
+
+            $table->text('description')->nullable();
+
+        <<< Change column start >>>
+            bigIncrements => id,
+            user_id => employee_id,
+            title => description ,
+
+       <<< Change column end >>>
+
+       <<< remove column start >>>
+            'permited_by',
+            'date'
+            'auth_id'
+       <<< remove column end >>>
+
+       <<< Current Table status start >>>
+===========================================
+        ____old table____ = ____new table____
+
+               'id'       =      datatype (bigIncrements => id),
+            user_id'      =>     'employee_id',
+        'permited_by'    -=       X (remove),
+            'title'      +=      'description' datatype (string => text),
+            'month'       =       (still),
+            'date'        =       (still),
+            'year'        =       (still),
+            'amount'      =       (still),
+            'deduction'   =       X (remove),
+            'auth_id'     =       X (remove),
+
+        ____old table____ = ____new table____
+
+
+       <<< Current Table end >>>
+============================================
+
+       <<< change datatype start >>>
+            (increment_type) = string to tinyInteger
+            (increment_details) = string to text
+       <<< change datatype end >>>
+================================================================
+                <------otherearns table change end
+================================================================
+
+
+*************************** No Change table*************************************
+                <------bd_divisions no change--->
+                <------bd_districts no change--->
+                <------bd_upazilas no change--->
+                <------bd_unions no change--->
+****************************************************************
+
+#############  advances table  ############
+===========================================
+        ____old table____ = ____new table____
+
+            'id'          =      no change,
+            'user_id'     >>     'employee_id' (change),
+            'title'       !!     remove title,
+            'month'       =       no change,
+            'date'        =       no change,
+            'year'        =       no change,
+            'amount'      =       no change,
+            'permited_by' >>      permitted_by,
+            'description' >>      'detail'
+            'auth_id'     !!      remove auth_id,
+
+
+
+#############  employee table  ############
+===========================================
+       date : 09/05/2023;
+       add a new field >> overtime_allowed ;
+
+
+***********  meaning of sign **********
+        before >> after change,
+                !! remove,
+                =  no change,
+                ++ add new,
+***********  meaning of sign **********

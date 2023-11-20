@@ -1,0 +1,11 @@
+{
+    "name": "Scale",
+    "alias": "scale",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Scale\\Providers\\ScaleServiceProvider"
+    ],
+    "files": []
+}

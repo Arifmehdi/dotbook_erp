@@ -1,0 +1,8 @@
+Github repository remote: git@github.com:speeddigit/dotbook-ERP.git
+ssh root@143.110.191.125
+
+Staging server:
+dotbookerp.com:800
+
+Production server
+dotbookerp.com

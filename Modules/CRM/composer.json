@@ -1,0 +1,23 @@
+{
+    "name": "speeddigit/crm",
+    "description": "",
+    "authors": [
+        {
+            "name": "speeddigit",
+            "email": "speeddigitteam@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\CRM\\": ""
+        }
+    }
+}

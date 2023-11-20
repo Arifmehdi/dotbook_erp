@@ -1,0 +1,5 @@
+php artisan fresh-module CRM --seed=no --connection=crm
+php artisan fresh-module HRM --seed=no --connection=hrm
+php artisan fresh-module Contacts --seed=no --connection=crm
+
+php .\artisan fresh-module HRM --connection=hrm

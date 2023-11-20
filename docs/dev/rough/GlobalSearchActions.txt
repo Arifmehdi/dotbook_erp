@@ -1,0 +1,23 @@
+Global replacements using vs-code search and replace tool
+
+- <th class="text-start replaced by <th class="text-startx
+- <th class="text-end replaced by <th class="text-endx
+- class="mt-5" replaced by class="mt-5x"
+
+
+07-06-2022 (Moon)
+
+`fas fa-arrow-circle-left fa-2x text-primary"></i>`
+replaced in place of
+`fas fa-long-arrow-alt-left text-white"></i> Back`
+
+
+================================================
+
+Localization replaced by global searches: 
+
+
+<i class="fa-thin fa-left-to-line fa-2x"></i><br> Back
+<i class="fa-thin fa-left-to-line fa-2x"></i><br> @lang('menu.back')
+
+

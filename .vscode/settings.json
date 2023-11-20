@@ -1,0 +1,75 @@
+{
+    "cSpell.words": [
+        "autoload",
+        "bkash",
+        "buet",
+        "Calcultion",
+        "challan",
+        "Datatable",
+        "dbal",
+        "Dispatchable",
+        "Dotbook",
+        "entrypoints",
+        "idcard",
+        "IMEI",
+        "jquery",
+        "Mailables",
+        "nagad",
+        "organogram",
+        "Organogram",
+        "phpmyadmin",
+        "Queueable",
+        "Spatie",
+        "speeddigit",
+        "superadmin",
+        "Thana",
+        "thanas",
+        "Thanas",
+        "toastr",
+        "tooltiptext",
+        "unorder",
+        "Upay",
+        "upazila",
+        "Upazila",
+        "Upazilla",
+        "Upazillas",
+        "wraper"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true,
+        ".idea": true,
+        ".phpunit.cache": true,
+        ".github/workflows": true,
+        ".github": true
+    },
+    "git.ignoreLimitWarning": true,
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "mysql",
+            "database": "erp2",
+            "username": "root",
+            "password": ""
+        }
+    ],
+    "hide-files.files": [
+        ".phpunit.cache",
+        ".github/workflows",
+        ".github"
+    ]
+}

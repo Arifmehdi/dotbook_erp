@@ -1,0 +1,2 @@
+SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`erp`.`leave_applications`, CONSTRAINT `leave_applications_employee_id_foreign` FOREIGN KEY (`employee_id`) REFERENCES `employees` (`id`) ON DELETE CASCADE) (Connection: hrm, SQL: insert into `leave_applications` (`id`, `employee_id`, `leave_type_id`, `from_date`, `to_date`, `approve_day`, `reason`, `attachment`, `status`, `created_at`, `updated_at`, `deleted_at`) values (136, 689, 1, 2022-03-07, 2022-03-08, 2, ?, ?, 1, 2022-03-31 16:22:30, ?, ?))
+

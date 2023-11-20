@@ -1,0 +1,11 @@
+07 December 2022
+==============================
+Current:
+
+commit: 92735d4538848c0e47472f7393dbeac290259ec6 (main)
+last-migration: 2022_11_07_132051_add_new_col_to_purchase_requisition_products_table
+
+New:
+
+commit: 6fb2e4ff526649b143c601b8074b55650a50c000 (main)
+Commit: c5259ef7522d43f0735b49d8f620906663f25f7d(main)
