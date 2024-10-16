@@ -201,14 +201,17 @@
 
                                             <div class="mt-4">
                                                 <p class="details"><span>{{ __('Address') }} :</span>Uttara, Dhaka - 1230</p>
-                                                <p class="details"><span>{{ __('Support') }} :</span>support@speeddigit.com</p>
-                                                <p class="details"><span>{{ __('Website') }} :</span>www.speeddigit.com</p>
+                                                <p class="details"><span>{{ __('Support') }} :</span>bbcoderbd@gmail.com</p>
+                                                {{-- <p class="details"><span>{{ __('Website') }} :</span>www.marifsoft.com</p> --}}
                                             </div>
 
                                             <div class="function-btn">
-                                                <a href="https://www.facebook.com/speeddigit" target="_blank"><span class="btn-fn facebook"><i class="fab fa-facebook"></i></span></a>
+                                                <a href="#" target="_blank"><span class="btn-fn facebook"><i class="fab fa-facebook"></i></span></a>
+                                                <a href="#" target="_blank"><span class="btn-fn twitter"><i class="fab fa-twitter"></i></span></a>
+                                                <a href="#" target="_blank"><span class="btn-fn youtube"><i class="fab fa-youtube"></i></span></a>
+                                                {{-- <a href="https://www.facebook.com/speeddigit" target="_blank"><span class="btn-fn facebook"><i class="fab fa-facebook"></i></span></a>
                                                 <a href="https://twitter.com/speeddigit" target="_blank"><span class="btn-fn twitter"><i class="fab fa-twitter"></i></span></a>
-                                                <a href="https://www.youtube.com/channel/UCaAEw77OeMvjwu5vOjueWmQ" target="_blank"><span class="btn-fn youtube"><i class="fab fa-youtube"></i></span></a>
+                                                <a href="https://www.youtube.com/channel/UCaAEw77OeMvjwu5vOjueWmQ" target="_blank"><span class="btn-fn youtube"><i class="fab fa-youtube"></i></span></a> --}}
                                             </div>
                                         </div>
                                     </div>
